@@ -16,4 +16,5 @@ extension Color {
 struct ColorTheme {
 
     let background: Color = Color("BackgroundColor")
+    let continueButtonColor: Color = Color("ContinueButtonColor")
 }

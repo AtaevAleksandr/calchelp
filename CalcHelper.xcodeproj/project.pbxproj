@@ -15,6 +15,10 @@
 		5BB4DFA42B00E81000DE827B /* SpinnerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BB4DFA32B00E81000DE827B /* SpinnerView.swift */; };
 		5BB4DFA72B00E84400DE827B /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BB4DFA62B00E84400DE827B /* Color.swift */; };
 		5BB4DFA92B00F17900DE827B /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BB4DFA82B00F17900DE827B /* LoadingView.swift */; };
+		5BB4DFAE2B01031400DE827B /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BB4DFAD2B01031400DE827B /* WelcomeView.swift */; };
+		5BB4DFB32B01044700DE827B /* BackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BB4DFB22B01044700DE827B /* BackgroundView.swift */; };
+		5BB4DFB52B0112FA00DE827B /* ContinueButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BB4DFB42B0112FA00DE827B /* ContinueButtonView.swift */; };
+		5BB4DFB72B0125BB00DE827B /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BB4DFB62B0125BB00DE827B /* OnboardingView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +31,10 @@
 		5BB4DFA32B00E81000DE827B /* SpinnerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpinnerView.swift; sourceTree = "<group>"; };
 		5BB4DFA62B00E84400DE827B /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		5BB4DFA82B00F17900DE827B /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		5BB4DFAD2B01031400DE827B /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
+		5BB4DFB22B01044700DE827B /* BackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundView.swift; sourceTree = "<group>"; };
+		5BB4DFB42B0112FA00DE827B /* ContinueButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContinueButtonView.swift; sourceTree = "<group>"; };
+		5BB4DFB62B0125BB00DE827B /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,7 +70,6 @@
 				5BB4DF9C2B00DE7200DE827B /* App */,
 				5BB4DF942B00DE3700DE827B /* Preview Content */,
 				5BB4DFA52B00E82700DE827B /* Extensions */,
-				5BB4DF9D2B00DF5300DE827B /* Preloader */,
 				5BB4DFAA2B00F22100DE827B /* Core */,
 			);
 			path = CalcHelper;
@@ -122,6 +129,8 @@
 			isa = PBXGroup;
 			children = (
 				5BB4DFAB2B00F22C00DE827B /* Components */,
+				5BB4DF9D2B00DF5300DE827B /* Preloader */,
+				5BB4DFAC2B0102FD00DE827B /* Main */,
 				5BB4DF902B00DE3500DE827B /* ContentView.swift */,
 			);
 			path = Core;
@@ -131,8 +140,27 @@
 			isa = PBXGroup;
 			children = (
 				5BB4DFA32B00E81000DE827B /* SpinnerView.swift */,
+				5BB4DFB42B0112FA00DE827B /* ContinueButtonView.swift */,
 			);
 			path = Components;
+			sourceTree = "<group>";
+		};
+		5BB4DFAC2B0102FD00DE827B /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				5BB4DFB12B01043500DE827B /* Views */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		5BB4DFB12B01043500DE827B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				5BB4DFB22B01044700DE827B /* BackgroundView.swift */,
+				5BB4DFB62B0125BB00DE827B /* OnboardingView.swift */,
+				5BB4DFAD2B01031400DE827B /* WelcomeView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -207,10 +235,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				5BB4DF912B00DE3500DE827B /* ContentView.swift in Sources */,
+				5BB4DFAE2B01031400DE827B /* WelcomeView.swift in Sources */,
 				5BB4DFA72B00E84400DE827B /* Color.swift in Sources */,
+				5BB4DFB72B0125BB00DE827B /* OnboardingView.swift in Sources */,
+				5BB4DFB32B01044700DE827B /* BackgroundView.swift in Sources */,
 				5BB4DFA42B00E81000DE827B /* SpinnerView.swift in Sources */,
 				5BB4DFA92B00F17900DE827B /* LoadingView.swift in Sources */,
 				5BB4DF8F2B00DE3500DE827B /* CalcHelperApp.swift in Sources */,
+				5BB4DFB52B0112FA00DE827B /* ContinueButtonView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

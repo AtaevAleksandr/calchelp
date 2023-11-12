@@ -20,8 +20,7 @@ struct LoadingView: View {
             SpinnerView(isLoading: $isLoading)
 
             if !isLoading {
-                ContentView()
-                    .transition(.move(edge: .leading))
+                WelcomeView()
             }
         }
         .onAppear {
@@ -29,9 +28,7 @@ struct LoadingView: View {
                 requestTrackingAuthorization()
             }
             Timer.scheduledTimer(withTimeInterval: 3, repeats: false) { _ in
-                withAnimation() {
-                    isLoading = false
-                }
+                isLoading = false
             }
         }
     }
