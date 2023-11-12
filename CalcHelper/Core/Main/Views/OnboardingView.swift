@@ -19,6 +19,9 @@ struct OnboardingView: View {
             case 0: WelcomeView()
             case 1: DirectAccessView()
             case 2: UpdatesView()
+            case 3: DemoCalculators()
+            case 4: RateView()
+            case 5: GetStartedView()
             default: BackgroundView()
             }
 
@@ -37,8 +40,7 @@ struct OnboardingView: View {
 // MARK: COMPONENTS
 extension OnboardingView {
     private var bottomButton: some View {
-        Text(onboardingState == 0 ? "Continue" :
-                onboardingState == 2 ? "Show" : "Continue")
+        Text(onboardingState == 2 || onboardingState == 4 ? "Show" : "Continue")
         .font(.headline)
         .foregroundStyle(.white)
         .frame(height: 53)
