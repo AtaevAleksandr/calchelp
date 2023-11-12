@@ -12,25 +12,12 @@ struct BackgroundView: View {
         ZStack {
             Color.theme.background
                 .ignoresSafeArea()
-
-            VStack {
-//                Spacer()
-//                Spacer()
-//                Spacer()
-
-
-
-                Image("Lines")
-                    .resizable()
-                    .scaledToFit()
-//                Spacer()
-
-            }
-
-                            .offset(y: 150)
-
+            
+            Image("Lines")
+                .resizable()
+                .scaledToFit()
+                .offset(y: 150)
         }
-
     }
 }
 

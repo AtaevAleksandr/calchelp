@@ -41,8 +41,7 @@ struct DirectAccessView: View {
                 
                 Spacer()
                 Spacer()
-
-                ContinueButtonView(buttonName: "Continue")
+                Spacer()
             }
             .foregroundStyle(.white)
         }

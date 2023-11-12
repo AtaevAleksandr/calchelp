@@ -13,10 +13,8 @@ struct WelcomeView: View {
             BackgroundView()
 
             VStack {
-//                Spacer()
                 Text("Welcome!")
                     .font(.system(size: 32, weight: .bold))
-//                Spacer()
                     .padding(.top, 60)
                 Spacer()
 
@@ -24,18 +22,15 @@ struct WelcomeView: View {
                     .frame(width: 278)
                     .font(.system(size: 18, weight: .heavy))
                     .multilineTextAlignment(.center)
-//                    .padding(.top, 94)
                 Spacer()
 
                 Text("Trade without distracting from the process, and leave the calculations you need to the application!")
                     .frame(width: 278)
                     .font(.system(size: 18, weight: .heavy))
                     .multilineTextAlignment(.center)
-//                    .padding(.top, 134)
                 Spacer()
                 Spacer()
-
-                ContinueButtonView(buttonName: "Continue")
+                Spacer()
             }
             .foregroundStyle(.white)
         }
