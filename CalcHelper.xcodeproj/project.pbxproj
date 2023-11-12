@@ -19,6 +19,7 @@
 		5BB4DFB32B01044700DE827B /* BackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BB4DFB22B01044700DE827B /* BackgroundView.swift */; };
 		5BB4DFB52B0112FA00DE827B /* ContinueButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BB4DFB42B0112FA00DE827B /* ContinueButtonView.swift */; };
 		5BB4DFB72B0125BB00DE827B /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BB4DFB62B0125BB00DE827B /* OnboardingView.swift */; };
+		5BB4DFB92B01280D00DE827B /* DirectAccessView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BB4DFB82B01280D00DE827B /* DirectAccessView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,7 @@
 		5BB4DFB22B01044700DE827B /* BackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundView.swift; sourceTree = "<group>"; };
 		5BB4DFB42B0112FA00DE827B /* ContinueButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContinueButtonView.swift; sourceTree = "<group>"; };
 		5BB4DFB62B0125BB00DE827B /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
+		5BB4DFB82B01280D00DE827B /* DirectAccessView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirectAccessView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -159,6 +161,7 @@
 				5BB4DFB22B01044700DE827B /* BackgroundView.swift */,
 				5BB4DFB62B0125BB00DE827B /* OnboardingView.swift */,
 				5BB4DFAD2B01031400DE827B /* WelcomeView.swift */,
+				5BB4DFB82B01280D00DE827B /* DirectAccessView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -237,6 +240,7 @@
 				5BB4DF912B00DE3500DE827B /* ContentView.swift in Sources */,
 				5BB4DFAE2B01031400DE827B /* WelcomeView.swift in Sources */,
 				5BB4DFA72B00E84400DE827B /* Color.swift in Sources */,
+				5BB4DFB92B01280D00DE827B /* DirectAccessView.swift in Sources */,
 				5BB4DFB72B0125BB00DE827B /* OnboardingView.swift in Sources */,
 				5BB4DFB32B01044700DE827B /* BackgroundView.swift in Sources */,
 				5BB4DFA42B00E81000DE827B /* SpinnerView.swift in Sources */,

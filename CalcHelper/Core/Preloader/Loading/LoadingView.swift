@@ -20,7 +20,7 @@ struct LoadingView: View {
             SpinnerView(isLoading: $isLoading)
 
             if !isLoading {
-                WelcomeView()
+                OnboardingView()
             }
         }
         .onAppear {

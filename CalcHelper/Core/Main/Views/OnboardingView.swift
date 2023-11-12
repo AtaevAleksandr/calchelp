@@ -9,12 +9,13 @@ import SwiftUI
 
 struct OnboardingView: View {
 
-    @State var onboardingState: Int = 0
+    @State var onboardingState: Int = 1
 
     var body: some View {
         ZStack {
             switch onboardingState {
             case 0: WelcomeView()
+            case 1: DirectAccessView()
             default: EmptyView()
             }
         }

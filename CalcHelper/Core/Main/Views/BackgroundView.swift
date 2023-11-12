@@ -13,10 +13,22 @@ struct BackgroundView: View {
             Color.theme.background
                 .ignoresSafeArea()
 
-            Image("Lines")
-                .resizable()
-                .scaledToFit()
-                .offset(y: 165)
+            VStack {
+//                Spacer()
+//                Spacer()
+//                Spacer()
+
+
+
+                Image("Lines")
+                    .resizable()
+                    .scaledToFit()
+//                Spacer()
+
+            }
+
+                            .offset(y: 150)
+
         }
 
     }
