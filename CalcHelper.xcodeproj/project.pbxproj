@@ -11,6 +11,10 @@
 		5BB4DF912B00DE3500DE827B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BB4DF902B00DE3500DE827B /* ContentView.swift */; };
 		5BB4DF932B00DE3700DE827B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5BB4DF922B00DE3700DE827B /* Assets.xcassets */; };
 		5BB4DF962B00DE3700DE827B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5BB4DF952B00DE3700DE827B /* Preview Assets.xcassets */; };
+		5BB4DF9F2B00DF6400DE827B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5BB4DF9E2B00DF6400DE827B /* LaunchScreen.storyboard */; };
+		5BB4DFA42B00E81000DE827B /* SpinnerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BB4DFA32B00E81000DE827B /* SpinnerView.swift */; };
+		5BB4DFA72B00E84400DE827B /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BB4DFA62B00E84400DE827B /* Color.swift */; };
+		5BB4DFA92B00F17900DE827B /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BB4DFA82B00F17900DE827B /* LoadingView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +23,10 @@
 		5BB4DF902B00DE3500DE827B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		5BB4DF922B00DE3700DE827B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5BB4DF952B00DE3700DE827B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		5BB4DF9E2B00DF6400DE827B /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		5BB4DFA32B00E81000DE827B /* SpinnerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpinnerView.swift; sourceTree = "<group>"; };
+		5BB4DFA62B00E84400DE827B /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		5BB4DFA82B00F17900DE827B /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,10 +59,11 @@
 		5BB4DF8D2B00DE3500DE827B /* CalcHelper */ = {
 			isa = PBXGroup;
 			children = (
-				5BB4DF8E2B00DE3500DE827B /* CalcHelperApp.swift */,
-				5BB4DF902B00DE3500DE827B /* ContentView.swift */,
-				5BB4DF922B00DE3700DE827B /* Assets.xcassets */,
+				5BB4DF9C2B00DE7200DE827B /* App */,
 				5BB4DF942B00DE3700DE827B /* Preview Content */,
+				5BB4DFA52B00E82700DE827B /* Extensions */,
+				5BB4DF9D2B00DF5300DE827B /* Preloader */,
+				5BB4DFAA2B00F22100DE827B /* Core */,
 			);
 			path = CalcHelper;
 			sourceTree = "<group>";
@@ -65,6 +74,65 @@
 				5BB4DF952B00DE3700DE827B /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		5BB4DF9C2B00DE7200DE827B /* App */ = {
+			isa = PBXGroup;
+			children = (
+				5BB4DF8E2B00DE3500DE827B /* CalcHelperApp.swift */,
+				5BB4DF922B00DE3700DE827B /* Assets.xcassets */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		5BB4DF9D2B00DF5300DE827B /* Preloader */ = {
+			isa = PBXGroup;
+			children = (
+				5BB4DFA12B00E24F00DE827B /* Launch */,
+				5BB4DFA22B00E7CF00DE827B /* Loading */,
+			);
+			path = Preloader;
+			sourceTree = "<group>";
+		};
+		5BB4DFA12B00E24F00DE827B /* Launch */ = {
+			isa = PBXGroup;
+			children = (
+				5BB4DF9E2B00DF6400DE827B /* LaunchScreen.storyboard */,
+			);
+			path = Launch;
+			sourceTree = "<group>";
+		};
+		5BB4DFA22B00E7CF00DE827B /* Loading */ = {
+			isa = PBXGroup;
+			children = (
+				5BB4DFA82B00F17900DE827B /* LoadingView.swift */,
+			);
+			path = Loading;
+			sourceTree = "<group>";
+		};
+		5BB4DFA52B00E82700DE827B /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				5BB4DFA62B00E84400DE827B /* Color.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		5BB4DFAA2B00F22100DE827B /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				5BB4DFAB2B00F22C00DE827B /* Components */,
+				5BB4DF902B00DE3500DE827B /* ContentView.swift */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		5BB4DFAB2B00F22C00DE827B /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				5BB4DFA32B00E81000DE827B /* SpinnerView.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -125,6 +193,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5BB4DF9F2B00DF6400DE827B /* LaunchScreen.storyboard in Resources */,
 				5BB4DF962B00DE3700DE827B /* Preview Assets.xcassets in Resources */,
 				5BB4DF932B00DE3700DE827B /* Assets.xcassets in Resources */,
 			);
@@ -138,6 +207,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				5BB4DF912B00DE3500DE827B /* ContentView.swift in Sources */,
+				5BB4DFA72B00E84400DE827B /* Color.swift in Sources */,
+				5BB4DFA42B00E81000DE827B /* SpinnerView.swift in Sources */,
+				5BB4DFA92B00F17900DE827B /* LoadingView.swift in Sources */,
 				5BB4DF8F2B00DE3500DE827B /* CalcHelperApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -275,11 +347,14 @@
 				DEVELOPMENT_TEAM = 695W8CRMKH;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = CalcHelper;
+				INFOPLIST_KEY_NSUserTrackingUsageDescription = "Your data will be used to deliver personalise ads to you.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -287,6 +362,9 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = AtaevAleksandr.CalcHelper;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -304,11 +382,14 @@
 				DEVELOPMENT_TEAM = 695W8CRMKH;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = CalcHelper;
+				INFOPLIST_KEY_NSUserTrackingUsageDescription = "Your data will be used to deliver personalise ads to you.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -316,6 +397,9 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = AtaevAleksandr.CalcHelper;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

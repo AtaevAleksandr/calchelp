@@ -11,7 +11,8 @@ import SwiftUI
 struct CalcHelperApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            LoadingView()
+                .preferredColorScheme(.dark)
         }
     }
 }
