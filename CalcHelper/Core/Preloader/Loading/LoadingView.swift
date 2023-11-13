@@ -12,21 +12,26 @@ struct LoadingView: View {
 
     @State private var isLoading: Bool = false
     @State private var rotation: Double = 0
+    @State private var currentShowView: Bool = false
 
     var body: some View {
 
-        ZStack {
-            OnboardingView()
+        if currentShowView {
+            HomeView()
+        } else {
+            ZStack {
+                OnboardingView(currentShowView: $currentShowView)
 
-            if isLoading {
-                ZStack {
-                    Color.theme.background
-                        .ignoresSafeArea()
-                    spinner
+                if isLoading {
+                    ZStack {
+                        Color.theme.background
+                            .ignoresSafeArea()
+                        spinner
+                    }
                 }
             }
+            .onAppear() { fakeStartLoading() }
         }
-        .onAppear() { fakeStartLoading() }
     }
 
     private func fakeStartLoading() {
@@ -43,13 +48,13 @@ struct LoadingView: View {
         ATTrackingManager.requestTrackingAuthorization { status in
             switch status {
             case .authorized:
-                print("Tracking authorization granted")
+                break
             case .denied:
-                print("Tracking authorization denied")
+                break
             case .notDetermined:
-                print("Tracking authorization not determined")
+                break
             case .restricted:
-                print("Tracking authorization restricted")
+                break
             @unknown default:
                 break
             }

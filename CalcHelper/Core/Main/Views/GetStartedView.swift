@@ -9,10 +9,24 @@ import SwiftUI
 
 struct GetStartedView: View {
     var body: some View {
-        Text("GetStartedView")
+        ZStack {
+            Ellipse()
+                .foregroundStyle(Color.theme.customMint)
+                .frame(width: 375, height: 347)
+                .opacity(0.4)
+                .blur(radius: 65)
+
+            Image("GetReady")
+                .resizable()
+                .scaledToFit()
+                .padding(.horizontal)
+        }
     }
 }
 
 #Preview {
-    GetStartedView()
+    ZStack {
+        BackgroundView()
+        GetStartedView()
+    }
 }
