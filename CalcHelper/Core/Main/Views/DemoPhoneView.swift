@@ -20,8 +20,8 @@ struct DemoPhoneView: View {
             ZStack {
                 blurEllipse
                 phone
+                    .overlay(backgroundPhone, alignment: .bottom)
                 notifications
-                backgroundPhone
             }
         }
     }
@@ -40,19 +40,15 @@ struct DemoPhoneView: View {
 extension DemoPhoneView {
 
     private var blurEllipse: some View {
-        Ellipse()
-            .foregroundStyle(Color.theme.customMint)
-            .frame(width: 230, height: 500)
-            .blur(radius: 50)
-            .offset(y: -60)
-            .padding(.horizontal)
+        Image("Blur")
+            .resizable()
     }
 
     private var phone: some View {
         Image("iPhone")
             .resizable()
             .scaledToFit()
-            .offset(y: 36)
+            .offset(y: 90)
             .padding(.horizontal, 50)
     }
 
@@ -60,7 +56,7 @@ extension DemoPhoneView {
         Image("Notification")
             .resizable()
             .scaledToFit()
-            .offset(y: -40)
+            .offset(y: 15)
             .padding(.horizontal)
     }
 
@@ -68,6 +64,6 @@ extension DemoPhoneView {
         Image("BackgroundiPhone")
             .resizable()
             .scaledToFit()
-            .offset(y: 115)
+            .offset(y: 90)
     }
 }
