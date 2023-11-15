@@ -17,7 +17,7 @@ struct LoadingView: View {
     var body: some View {
 
         if currentShowView {
-            HomeView()
+            TabBarView()
         } else {
             ZStack {
                 OnboardingView(currentShowView: $currentShowView)

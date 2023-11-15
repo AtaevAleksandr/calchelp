@@ -81,7 +81,7 @@ extension OnboardingView {
         } else if onboardingState == 4 {
             requestReview()
         } else if onboardingState == 5 {
-            goToHomeView()
+            goToTabView()
         } else {
             withAnimation(.spring()) {
                 onboardingState += 1
@@ -116,7 +116,7 @@ extension OnboardingView {
         }
     }
 
-    private func goToHomeView() {
+    private func goToTabView() {
         withAnimation(.spring()) {
             currentShowView = true
         }
