@@ -1,14 +1,14 @@
 //
-//  SettingsButton.swift
+//  FibonacciButton.swift
 //  CalcHelper
 //
-//  Created by Aleksandr Ataev on 16.11.2023.
+//  Created by Aleksandr Ataev on 17.11.2023.
 //
 
 import SwiftUI
 
-struct SettingsButton: View {
-
+struct FibonacciButton: View {
+    
     @State var title: String
     @State var iconImage: String
 
@@ -38,5 +38,5 @@ struct SettingsButton: View {
 }
 
 #Preview {
-    SettingsButton(title: "Settings", iconImage: "Settings")
+    FibonacciButton(title: "Fibonacci Calculator", iconImage: "Fibonacci")
 }

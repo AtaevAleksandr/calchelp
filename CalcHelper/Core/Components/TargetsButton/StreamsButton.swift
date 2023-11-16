@@ -1,14 +1,14 @@
 //
-//  TargetButton.swift
+//  StreamsButton.swift
 //  CalcHelper
 //
-//  Created by Aleksandr Ataev on 16.11.2023.
+//  Created by Aleksandr Ataev on 17.11.2023.
 //
 
 import SwiftUI
 
-struct TargetButton: View {
-
+struct StreamsButton: View {
+    
     @State var title: String
     @State var iconImage: String
 
@@ -36,5 +36,5 @@ struct TargetButton: View {
 }
 
 #Preview {
-    TargetButton(title: "Streams", iconImage: "Streams")
+    StreamsButton(title: "Streams", iconImage: "Streams")
 }

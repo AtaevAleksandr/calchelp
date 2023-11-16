@@ -1,14 +1,14 @@
 //
-//  CalculatorButton.swift
+//  SupportAppButton.swift
 //  CalcHelper
 //
-//  Created by Aleksandr Ataev on 16.11.2023.
+//  Created by Aleksandr Ataev on 17.11.2023.
 //
 
 import SwiftUI
 
-struct CalculatorButton: View {
-
+struct SupportAppButton: View {
+    
     @State var title: String
     @State var iconImage: String
 
@@ -25,7 +25,11 @@ struct CalculatorButton: View {
 
                 Text(title)
                     .font(.system(size: 18, weight: .medium))
+
                 Spacer()
+
+                Image(systemName: "chevron.right")
+                    .foregroundStyle(.gray)
             }
             .padding(.horizontal)
         }
@@ -38,5 +42,5 @@ struct CalculatorButton: View {
 }
 
 #Preview {
-    CalculatorButton(title: "Fibonacci", iconImage: "Fibonacci")
+    SupportAppButton(title: "Support App", iconImage: "Support")
 }

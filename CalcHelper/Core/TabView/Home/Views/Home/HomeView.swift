@@ -38,8 +38,8 @@ struct TradingView: View {
             .font(.system(size: 18, weight: .medium))
 
         HStack {
-            TargetButton(title: "Streams", iconImage: "Streams")
-            TargetButton(title: "Editors’ picks", iconImage: "Editors'")
+            StreamsButton(title: "Streams", iconImage: "Streams")
+            EditorsButton(title: "Editors’ picks", iconImage: "Editors'")
         }
     }
 }
@@ -51,8 +51,8 @@ struct CalculatorsView: View {
             .padding(.top, 24)
 
         VStack {
-            CalculatorButton(title: "Fibonacci Calculator", iconImage: "Fibonacci")
-            CalculatorButton(title: "Gain & Loss", iconImage: "GainLoss")
+            FibonacciButton(title: "Fibonacci Calculator", iconImage: "Fibonacci")
+            GainAndLossButton(title: "Gain & Loss", iconImage: "GainLoss")
             SettingsButton(title: "Settings", iconImage: "Settings")
         }
     }
