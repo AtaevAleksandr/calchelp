@@ -8,13 +8,14 @@
 import SwiftUI
 
 struct FibonacciButton: View {
-    
+
     @State var title: String
     @State var iconImage: String
+    @State var showFibonacci: Bool = false
 
     var body: some View {
         Button {
-            //TODO: Next View
+            showFibonacci.toggle()
         } label: {
             HStack() {
                 Image(iconImage)
@@ -34,6 +35,9 @@ struct FibonacciButton: View {
         .foregroundStyle(.white)
         .background(Color.theme.backgroundComponents)
         .cornerRadius(16)
+        .fullScreenCover(isPresented: $showFibonacci) {
+            FibonacciCalculator(showFibonacci: $showFibonacci)
+        }
     }
 }
 

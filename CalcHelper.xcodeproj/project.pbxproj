@@ -19,6 +19,9 @@
 		5B7A2F242B057C0A00454B14 /* EditorsButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B7A2F232B057C0A00454B14 /* EditorsButton.swift */; };
 		5B7A2F262B057D1900454B14 /* GainAndLossButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B7A2F252B057D1900454B14 /* GainAndLossButton.swift */; };
 		5B7A2F282B057D8700454B14 /* SettingsButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B7A2F272B057D8700454B14 /* SettingsButton.swift */; };
+		5B7FBAAA2B093B65004E049F /* FibonacciCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B7FBAA92B093B65004E049F /* FibonacciCalculator.swift */; };
+		5B7FBAAC2B095365004E049F /* ListRowViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B7FBAAB2B095365004E049F /* ListRowViewModel.swift */; };
+		5B7FBAAE2B0957E3004E049F /* Double.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B7FBAAD2B0957E3004E049F /* Double.swift */; };
 		5B9FAD9A2B06C2960061BF21 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9FAD992B06C2960061BF21 /* SettingsView.swift */; };
 		5BA4D15D2B013D5D00B4A10F /* DemoPhoneView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BA4D15C2B013D5D00B4A10F /* DemoPhoneView.swift */; };
 		5BB4DF8F2B00DE3500DE827B /* CalcHelperApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BB4DF8E2B00DE3500DE827B /* CalcHelperApp.swift */; };
@@ -48,6 +51,9 @@
 		5B7A2F232B057C0A00454B14 /* EditorsButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditorsButton.swift; sourceTree = "<group>"; };
 		5B7A2F252B057D1900454B14 /* GainAndLossButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GainAndLossButton.swift; sourceTree = "<group>"; };
 		5B7A2F272B057D8700454B14 /* SettingsButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsButton.swift; sourceTree = "<group>"; };
+		5B7FBAA92B093B65004E049F /* FibonacciCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FibonacciCalculator.swift; sourceTree = "<group>"; };
+		5B7FBAAB2B095365004E049F /* ListRowViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListRowViewModel.swift; sourceTree = "<group>"; };
+		5B7FBAAD2B0957E3004E049F /* Double.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Double.swift; sourceTree = "<group>"; };
 		5B9FAD992B06C2960061BF21 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		5BA4D15C2B013D5D00B4A10F /* DemoPhoneView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoPhoneView.swift; sourceTree = "<group>"; };
 		5BB4DF8B2B00DE3500DE827B /* CalcHelper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CalcHelper.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -116,18 +122,18 @@
 			children = (
 				5B7A2F222B056CAB00454B14 /* TabBar */,
 				5B7A2F1B2B0550E400454B14 /* Background */,
-				5BD0B8EA2B02A9F400F362B4 /* Home */,
-				5B7A2F112B05504B00454B14 /* Signals */,
+				5BD0B8EA2B02A9F400F362B4 /* HomeTab */,
+				5B7A2F112B05504B00454B14 /* SignalsTab */,
 			);
 			path = TabView;
 			sourceTree = "<group>";
 		};
-		5B7A2F112B05504B00454B14 /* Signals */ = {
+		5B7A2F112B05504B00454B14 /* SignalsTab */ = {
 			isa = PBXGroup;
 			children = (
 				5B7A2F212B05637300454B14 /* Views */,
 			);
-			path = Signals;
+			path = SignalsTab;
 			sourceTree = "<group>";
 		};
 		5B7A2F132B05507000454B14 /* Background */ = {
@@ -229,6 +235,8 @@
 		5B9FAD962B06C2360061BF21 /* Fibonacci */ = {
 			isa = PBXGroup;
 			children = (
+				5B7FBAA92B093B65004E049F /* FibonacciCalculator.swift */,
+				5B7FBAAB2B095365004E049F /* ListRowViewModel.swift */,
 			);
 			path = Fibonacci;
 			sourceTree = "<group>";
@@ -321,6 +329,7 @@
 			isa = PBXGroup;
 			children = (
 				5BB4DFA62B00E84400DE827B /* Color.swift */,
+				5B7FBAAD2B0957E3004E049F /* Double.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -370,12 +379,12 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
-		5BD0B8EA2B02A9F400F362B4 /* Home */ = {
+		5BD0B8EA2B02A9F400F362B4 /* HomeTab */ = {
 			isa = PBXGroup;
 			children = (
 				5BF337672B04078B00BE382E /* Views */,
 			);
-			path = Home;
+			path = HomeTab;
 			sourceTree = "<group>";
 		};
 		5BF337672B04078B00BE382E /* Views */ = {
@@ -464,6 +473,9 @@
 				5B27E3232B06CDA9006787C9 /* StreamsButton.swift in Sources */,
 				5BB4DFAE2B01031400DE827B /* WelcomeView.swift in Sources */,
 				5B7A2F262B057D1900454B14 /* GainAndLossButton.swift in Sources */,
+				5B7FBAAE2B0957E3004E049F /* Double.swift in Sources */,
+				5B7FBAAA2B093B65004E049F /* FibonacciCalculator.swift in Sources */,
+				5B7FBAAC2B095365004E049F /* ListRowViewModel.swift in Sources */,
 				5BB4DFA72B00E84400DE827B /* Color.swift in Sources */,
 				5BB4DFB92B01280D00DE827B /* DemoTargetsView.swift in Sources */,
 				5B7A2F202B05515D00454B14 /* SignalsView.swift in Sources */,
