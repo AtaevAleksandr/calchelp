@@ -54,21 +54,37 @@ struct OnboardingView: View {
 // MARK: COMPONENTS
 extension OnboardingView {
     private var bottomButton: some View {
-
-        Text(onboardingState == 5 ?
-             "Get Started" : onboardingState == 2 || onboardingState == 4 ?
-             "Show" : "Continue")
-        .font(.headline)
-        .foregroundStyle(.white)
-        .frame(height: 53)
-        .frame(maxWidth: .infinity)
-        .background(Color.theme.customMint)
-        .cornerRadius(16)
-        .animation(nil, value: UUID())
-        .onTapGesture {
+        Button {
             handleContinuedButtonPressed()
+        } label: {
+            Text(onboardingState == 5 ?
+                 "Get Started" : onboardingState == 2 || onboardingState == 4 ?
+                 "Show" : "Continue")
+            .font(.headline)
+            .foregroundStyle(.white)
+            .frame(height: 53)
+            .frame(maxWidth: .infinity)
+            .background(Color.theme.customMint)
+            .cornerRadius(16)
+            .animation(nil, value: UUID())
+            .padding()
         }
-        .padding()
+
+
+//        Text(onboardingState == 5 ?
+//             "Get Started" : onboardingState == 2 || onboardingState == 4 ?
+//             "Show" : "Continue")
+//        .font(.headline)
+//        .foregroundStyle(.white)
+//        .frame(height: 53)
+//        .frame(maxWidth: .infinity)
+//        .background(Color.theme.customMint)
+//        .cornerRadius(16)
+//        .animation(nil, value: UUID())
+//        .onTapGesture {
+//            handleContinuedButtonPressed()
+//        }
+//        .padding()
     }
 }
 

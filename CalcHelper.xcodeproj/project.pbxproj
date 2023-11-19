@@ -14,6 +14,7 @@
 		5B27E3232B06CDA9006787C9 /* StreamsButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B27E3222B06CDA9006787C9 /* StreamsButton.swift */; };
 		5B27E3292B06CEC7006787C9 /* PrivacyPolicyButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B27E3282B06CEC7006787C9 /* PrivacyPolicyButton.swift */; };
 		5B27E32B2B06CED3006787C9 /* SupportAppButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B27E32A2B06CED3006787C9 /* SupportAppButton.swift */; };
+		5B516A3B2B0A2EA100395CA4 /* RowModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B516A3A2B0A2EA100395CA4 /* RowModel.swift */; };
 		5B7A2F1E2B05512E00454B14 /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B7A2F1D2B05512E00454B14 /* TabBarView.swift */; };
 		5B7A2F202B05515D00454B14 /* SignalsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B7A2F1F2B05515D00454B14 /* SignalsView.swift */; };
 		5B7A2F242B057C0A00454B14 /* EditorsButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B7A2F232B057C0A00454B14 /* EditorsButton.swift */; };
@@ -21,7 +22,6 @@
 		5B7A2F282B057D8700454B14 /* SettingsButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B7A2F272B057D8700454B14 /* SettingsButton.swift */; };
 		5B7FBAAA2B093B65004E049F /* FibonacciCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B7FBAA92B093B65004E049F /* FibonacciCalculator.swift */; };
 		5B7FBAAC2B095365004E049F /* ListRowViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B7FBAAB2B095365004E049F /* ListRowViewModel.swift */; };
-		5B7FBAAE2B0957E3004E049F /* Double.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B7FBAAD2B0957E3004E049F /* Double.swift */; };
 		5B9FAD9A2B06C2960061BF21 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9FAD992B06C2960061BF21 /* SettingsView.swift */; };
 		5BA4D15D2B013D5D00B4A10F /* DemoPhoneView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BA4D15C2B013D5D00B4A10F /* DemoPhoneView.swift */; };
 		5BB4DF8F2B00DE3500DE827B /* CalcHelperApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BB4DF8E2B00DE3500DE827B /* CalcHelperApp.swift */; };
@@ -46,6 +46,7 @@
 		5B27E3222B06CDA9006787C9 /* StreamsButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreamsButton.swift; sourceTree = "<group>"; };
 		5B27E3282B06CEC7006787C9 /* PrivacyPolicyButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivacyPolicyButton.swift; sourceTree = "<group>"; };
 		5B27E32A2B06CED3006787C9 /* SupportAppButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupportAppButton.swift; sourceTree = "<group>"; };
+		5B516A3A2B0A2EA100395CA4 /* RowModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RowModel.swift; sourceTree = "<group>"; };
 		5B7A2F1D2B05512E00454B14 /* TabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
 		5B7A2F1F2B05515D00454B14 /* SignalsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignalsView.swift; sourceTree = "<group>"; };
 		5B7A2F232B057C0A00454B14 /* EditorsButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditorsButton.swift; sourceTree = "<group>"; };
@@ -53,7 +54,6 @@
 		5B7A2F272B057D8700454B14 /* SettingsButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsButton.swift; sourceTree = "<group>"; };
 		5B7FBAA92B093B65004E049F /* FibonacciCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FibonacciCalculator.swift; sourceTree = "<group>"; };
 		5B7FBAAB2B095365004E049F /* ListRowViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListRowViewModel.swift; sourceTree = "<group>"; };
-		5B7FBAAD2B0957E3004E049F /* Double.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Double.swift; sourceTree = "<group>"; };
 		5B9FAD992B06C2960061BF21 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		5BA4D15C2B013D5D00B4A10F /* DemoPhoneView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoPhoneView.swift; sourceTree = "<group>"; };
 		5BB4DF8B2B00DE3500DE827B /* CalcHelper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CalcHelper.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -237,6 +237,7 @@
 			children = (
 				5B7FBAA92B093B65004E049F /* FibonacciCalculator.swift */,
 				5B7FBAAB2B095365004E049F /* ListRowViewModel.swift */,
+				5B516A3A2B0A2EA100395CA4 /* RowModel.swift */,
 			);
 			path = Fibonacci;
 			sourceTree = "<group>";
@@ -329,7 +330,6 @@
 			isa = PBXGroup;
 			children = (
 				5BB4DFA62B00E84400DE827B /* Color.swift */,
-				5B7FBAAD2B0957E3004E049F /* Double.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -473,7 +473,6 @@
 				5B27E3232B06CDA9006787C9 /* StreamsButton.swift in Sources */,
 				5BB4DFAE2B01031400DE827B /* WelcomeView.swift in Sources */,
 				5B7A2F262B057D1900454B14 /* GainAndLossButton.swift in Sources */,
-				5B7FBAAE2B0957E3004E049F /* Double.swift in Sources */,
 				5B7FBAAA2B093B65004E049F /* FibonacciCalculator.swift in Sources */,
 				5B7FBAAC2B095365004E049F /* ListRowViewModel.swift in Sources */,
 				5BB4DFA72B00E84400DE827B /* Color.swift in Sources */,
@@ -486,6 +485,7 @@
 				5B27E3212B06CD1D006787C9 /* FibonacciButton.swift in Sources */,
 				5B27E3292B06CEC7006787C9 /* PrivacyPolicyButton.swift in Sources */,
 				5B7A2F282B057D8700454B14 /* SettingsButton.swift in Sources */,
+				5B516A3B2B0A2EA100395CA4 /* RowModel.swift in Sources */,
 				5B23B0202B017083007C6892 /* RateView.swift in Sources */,
 				5BF337662B04074300BE382E /* BackgroundTabView.swift in Sources */,
 				5BB4DF8F2B00DE3500DE827B /* CalcHelperApp.swift in Sources */,
