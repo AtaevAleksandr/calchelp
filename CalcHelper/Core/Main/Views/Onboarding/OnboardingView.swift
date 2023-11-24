@@ -98,7 +98,7 @@ extension OnboardingView {
             } else {
                 DispatchQueue.main.asyncAfter(deadline: .now()) {
                     withAnimation(.spring()) {
-                        self.onboardingState += 1
+                        onboardingState += 1
                     }
                 }
             }

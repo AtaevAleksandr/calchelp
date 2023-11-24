@@ -20,4 +20,5 @@ struct ColorTheme {
     let backgroundComponents: Color = Color("BackgroundComponentsColor")
     let customGreen: Color = Color("CustomGreenColor")
     let customRed: Color = Color("CustomRedColor")
+    let inactiveButton: Color = Color("InactiveButtonColor")
 }

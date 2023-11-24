@@ -86,22 +86,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		5B27E3242B06CDB4006787C9 /* TargetsButton */ = {
+		5B27E3242B06CDB4006787C9 /* TargetButtons */ = {
 			isa = PBXGroup;
 			children = (
 				5B27E3222B06CDA9006787C9 /* StreamsButton.swift */,
 				5B7A2F232B057C0A00454B14 /* EditorsButton.swift */,
 			);
-			path = TargetsButton;
+			path = TargetButtons;
 			sourceTree = "<group>";
 		};
-		5B27E3252B06CE32006787C9 /* CalculatorsButton */ = {
+		5B27E3252B06CE32006787C9 /* CalculatorButtons */ = {
 			isa = PBXGroup;
 			children = (
 				5B27E3202B06CD1D006787C9 /* FibonacciButton.swift */,
 				5B7A2F252B057D1900454B14 /* GainAndLossButton.swift */,
 			);
-			path = CalculatorsButton;
+			path = CalculatorButtons;
 			sourceTree = "<group>";
 		};
 		5B27E3262B06CE74006787C9 /* SettingsButton */ = {
@@ -112,13 +112,13 @@
 			path = SettingsButton;
 			sourceTree = "<group>";
 		};
-		5B27E3272B06CE81006787C9 /* SupportsButtons */ = {
+		5B27E3272B06CE81006787C9 /* SupportButtons */ = {
 			isa = PBXGroup;
 			children = (
 				5B27E3282B06CEC7006787C9 /* PrivacyPolicyButton.swift */,
 				5B27E32A2B06CED3006787C9 /* SupportAppButton.swift */,
 			);
-			path = SupportsButtons;
+			path = SupportButtons;
 			sourceTree = "<group>";
 		};
 		5B7A2F102B05502900454B14 /* TabView */ = {
@@ -354,10 +354,10 @@
 		5BB4DFAB2B00F22C00DE827B /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				5B27E3242B06CDB4006787C9 /* TargetsButton */,
-				5B27E3252B06CE32006787C9 /* CalculatorsButton */,
+				5B27E3242B06CDB4006787C9 /* TargetButtons */,
+				5B27E3252B06CE32006787C9 /* CalculatorButtons */,
 				5B27E3262B06CE74006787C9 /* SettingsButton */,
-				5B27E3272B06CE81006787C9 /* SupportsButtons */,
+				5B27E3272B06CE81006787C9 /* SupportButtons */,
 			);
 			path = Components;
 			sourceTree = "<group>";
