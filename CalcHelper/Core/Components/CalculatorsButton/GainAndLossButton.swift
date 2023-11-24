@@ -11,10 +11,11 @@ struct GainAndLossButton: View {
 
     @State var title: String
     @State var iconImage: String
+    @State var showGainLoss: Bool = false
 
     var body: some View {
         Button {
-            //TODO: Next View
+            showGainLoss.toggle()
         } label: {
             HStack() {
                 Image(iconImage)
@@ -34,6 +35,9 @@ struct GainAndLossButton: View {
         .foregroundStyle(.white)
         .background(Color.theme.backgroundComponents)
         .cornerRadius(16)
+        .fullScreenCover(isPresented: $showGainLoss) {
+            GainLossCalculator(showGainLoss: $showGainLoss)
+        }
     }
 }
 

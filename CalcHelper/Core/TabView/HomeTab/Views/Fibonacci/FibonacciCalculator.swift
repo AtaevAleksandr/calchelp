@@ -30,6 +30,11 @@ struct FibonacciCalculator: View {
     @State private var fib236Reverse: Double = 0
     @State private var fib0Reverse: Double = 0
 
+
+    private var isCalculateButtonDisabled: Bool {
+        highPrice.isEmpty || lowPrice.isEmpty
+    }
+
     var body: some View {
         NavigationView {
             ZStack() {
@@ -59,7 +64,10 @@ struct FibonacciCalculator: View {
             .toolbar { dissmissButton }
         }
         .onTapGesture {
-            UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
+            UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder),
+                                            to: nil,
+                                            from: nil,
+                                            for: nil)
         }
     }
 
@@ -87,23 +95,23 @@ struct FibonacciCalculator: View {
         fib0Reverse = calculateReverse(level: 0)
 
         viewModel.rows = [
-            LisRowViewComponent(value: "100.0% Retracement Value", 
+            LisRowViewComponent(value: "100.0% Retracement Value",
                                 direct: fib100Direct,
                                 reverse: fib100Reverse),
-            LisRowViewComponent(value: "61.8% Retracement Value", 
-                                direct: fib618Direct, 
+            LisRowViewComponent(value: "61.8% Retracement Value",
+                                direct: fib618Direct,
                                 reverse: fib618Reverse),
             LisRowViewComponent(value: "50.0% Retracement Value",
-                                direct: fib50Direct, 
+                                direct: fib50Direct,
                                 reverse: fib50Reverse),
             LisRowViewComponent(value: "38.2% Retracement Value",
-                                direct: fib382Direct, 
+                                direct: fib382Direct,
                                 reverse: fib382Reverse),
             LisRowViewComponent(value: "23.6% Retracement Value",
                                 direct: fib236Direct,
                                 reverse: fib236Reverse),
             LisRowViewComponent(value: "0.0% Retracement Value",
-                                direct: fib0Direct, 
+                                direct: fib0Direct,
                                 reverse: fib0Reverse)
         ]
 
@@ -150,6 +158,13 @@ extension FibonacciCalculator {
                 .padding(.horizontal)
                 .frame(height: 45)
                 .background(Color.theme.backgroundComponents)
+                .overlay(
+                    HStack {
+                        Spacer()
+                        Text("*")
+                            .padding(.trailing, 10)
+                    }
+                )
                 .cornerRadius(10)
                 .keyboardType(.numberPad)
         }
@@ -165,6 +180,13 @@ extension FibonacciCalculator {
                 .padding(.horizontal)
                 .frame(height: 45)
                 .background(Color.theme.backgroundComponents)
+                .overlay(
+                    HStack {
+                        Spacer()
+                        Text("*")
+                            .padding(.trailing, 10)
+                    }
+                )
                 .cornerRadius(10)
                 .keyboardType(.numberPad)
         }
@@ -182,8 +204,10 @@ extension FibonacciCalculator {
                 .frame(height: 53)
                 .frame(maxWidth: .infinity)
                 .background(Color.theme.customMint)
+                .opacity(isCalculateButtonDisabled ? 0.5 : 1.0)
                 .cornerRadius(16)
         }
+        .disabled(isCalculateButtonDisabled)
     }
 
     private var dissmissButton: some ToolbarContent {

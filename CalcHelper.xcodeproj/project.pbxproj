@@ -34,6 +34,8 @@
 		5BB4DFB32B01044700DE827B /* BackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BB4DFB22B01044700DE827B /* BackgroundView.swift */; };
 		5BB4DFB72B0125BB00DE827B /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BB4DFB62B0125BB00DE827B /* OnboardingView.swift */; };
 		5BB4DFB92B01280D00DE827B /* DemoTargetsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BB4DFB82B01280D00DE827B /* DemoTargetsView.swift */; };
+		5BB860612B0A9830005D13D3 /* Gain&LossCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BB860602B0A9830005D13D3 /* Gain&LossCalculator.swift */; };
+		5BB860632B0AAE86005D13D3 /* 212.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BB860622B0AAE86005D13D3 /* 212.swift */; };
 		5BD0B8EC2B02AA8900F362B4 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BD0B8EB2B02AA8900F362B4 /* HomeView.swift */; };
 		5BF337662B04074300BE382E /* BackgroundTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF337652B04074300BE382E /* BackgroundTabView.swift */; };
 /* End PBXBuildFile section */
@@ -67,6 +69,8 @@
 		5BB4DFB22B01044700DE827B /* BackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundView.swift; sourceTree = "<group>"; };
 		5BB4DFB62B0125BB00DE827B /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		5BB4DFB82B01280D00DE827B /* DemoTargetsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoTargetsView.swift; sourceTree = "<group>"; };
+		5BB860602B0A9830005D13D3 /* Gain&LossCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Gain&LossCalculator.swift"; sourceTree = "<group>"; };
+		5BB860622B0AAE86005D13D3 /* 212.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 212.swift; sourceTree = "<group>"; };
 		5BD0B8EB2B02AA8900F362B4 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		5BF337652B04074300BE382E /* BackgroundTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundTabView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -245,6 +249,7 @@
 		5B9FAD972B06C23D0061BF21 /* Gain&Loss */ = {
 			isa = PBXGroup;
 			children = (
+				5BB860602B0A9830005D13D3 /* Gain&LossCalculator.swift */,
 			);
 			path = "Gain&Loss";
 			sourceTree = "<group>";
@@ -280,6 +285,7 @@
 				5BB4DF942B00DE3700DE827B /* Preview Content */,
 				5BB4DFA52B00E82700DE827B /* Extensions */,
 				5BB4DFAA2B00F22100DE827B /* Core */,
+				5BB860622B0AAE86005D13D3 /* 212.swift */,
 			);
 			path = CalcHelper;
 			sourceTree = "<group>";
@@ -479,6 +485,7 @@
 				5BB4DFB92B01280D00DE827B /* DemoTargetsView.swift in Sources */,
 				5B7A2F202B05515D00454B14 /* SignalsView.swift in Sources */,
 				5BB4DFB72B0125BB00DE827B /* OnboardingView.swift in Sources */,
+				5BB860612B0A9830005D13D3 /* Gain&LossCalculator.swift in Sources */,
 				5B7A2F1E2B05512E00454B14 /* TabBarView.swift in Sources */,
 				5BB4DFB32B01044700DE827B /* BackgroundView.swift in Sources */,
 				5BB4DFA92B00F17900DE827B /* LoadingView.swift in Sources */,
@@ -489,6 +496,7 @@
 				5B23B0202B017083007C6892 /* RateView.swift in Sources */,
 				5BF337662B04074300BE382E /* BackgroundTabView.swift in Sources */,
 				5BB4DF8F2B00DE3500DE827B /* CalcHelperApp.swift in Sources */,
+				5BB860632B0AAE86005D13D3 /* 212.swift in Sources */,
 				5B23B0222B017096007C6892 /* GetStartedView.swift in Sources */,
 				5B27E32B2B06CED3006787C9 /* SupportAppButton.swift in Sources */,
 				5BD0B8EC2B02AA8900F362B4 /* HomeView.swift in Sources */,

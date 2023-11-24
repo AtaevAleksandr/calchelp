@@ -18,4 +18,6 @@ struct ColorTheme {
     let background: Color = Color("BackgroundColor")
     let customMint: Color = Color("CustomMintColor")
     let backgroundComponents: Color = Color("BackgroundComponentsColor")
+    let customGreen: Color = Color("CustomGreenColor")
+    let customRed: Color = Color("CustomRedColor")
 }

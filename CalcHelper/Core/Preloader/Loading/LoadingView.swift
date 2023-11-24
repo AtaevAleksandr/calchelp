@@ -10,17 +10,18 @@ import AppTrackingTransparency
 
 struct LoadingView: View {
 
+    @AppStorage("isAlredyOnboarding") var userAlredyOnboarding: Bool = false
+
     @State private var isLoading: Bool = false
     @State private var rotation: Double = 0
-    @State private var currentShowView: Bool = false
 
     var body: some View {
 
-        if currentShowView {
+        if userAlredyOnboarding {
             TabBarView()
         } else {
             ZStack {
-                OnboardingView(currentShowView: $currentShowView)
+                OnboardingView()
 
                 if isLoading {
                     ZStack {

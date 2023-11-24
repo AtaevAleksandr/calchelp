@@ -27,20 +27,7 @@ struct SettingsView: View {
             }
             .navigationTitle("Settings")
             .navigationBarTitleDisplayMode(.inline)
-            .toolbar {
-                ToolbarItem(placement: .topBarTrailing) {
-                    Button {
-                        showSettings.toggle()
-                    } label: {
-                        Image(systemName: "xmark")
-                            .resizable()
-                            .scaledToFit()
-                            .frame(width: 15, height: 15)
-                            .foregroundStyle(.white)
-                            .padding()
-                    }
-                }
-            }
+            .toolbar { dissmissButton }
         }
     }
 }
@@ -48,4 +35,22 @@ struct SettingsView: View {
 #Preview {
     SettingsView(showSettings: .constant(false))
         .preferredColorScheme(.dark)
+}
+
+//MARK: COMPONENTS
+extension SettingsView {
+    private var dissmissButton: some ToolbarContent {
+        ToolbarItem(placement: .topBarTrailing) {
+            Button {
+                showSettings.toggle()
+            } label: {
+                Image(systemName: "xmark")
+                    .resizable()
+                    .scaledToFit()
+                    .frame(width: 15, height: 15)
+                    .foregroundStyle(.white)
+                    .padding()
+            }
+        }
+    }
 }

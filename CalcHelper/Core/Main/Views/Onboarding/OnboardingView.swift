@@ -11,9 +11,10 @@ import StoreKit
 
 struct OnboardingView: View {
 
+    @AppStorage("isAlredyOnboarding") var userAlredyOnboarding: Bool = false
+
     @State private var onboardingState: Int = 0
     @State private var notificationAuthorization: Bool = false
-    @Binding var currentShowView: Bool
 
     let transition: AnyTransition = .asymmetric(
         insertion: .move(edge: .trailing),
@@ -48,10 +49,10 @@ struct OnboardingView: View {
 }
 
 #Preview {
-    OnboardingView(currentShowView: .constant(false))
+    OnboardingView()
 }
 
-// MARK: COMPONENTS
+//MARK: COMPONENTS
 extension OnboardingView {
     private var bottomButton: some View {
         Button {
@@ -69,22 +70,6 @@ extension OnboardingView {
             .animation(nil, value: UUID())
             .padding()
         }
-
-
-//        Text(onboardingState == 5 ?
-//             "Get Started" : onboardingState == 2 || onboardingState == 4 ?
-//             "Show" : "Continue")
-//        .font(.headline)
-//        .foregroundStyle(.white)
-//        .frame(height: 53)
-//        .frame(maxWidth: .infinity)
-//        .background(Color.theme.customMint)
-//        .cornerRadius(16)
-//        .animation(nil, value: UUID())
-//        .onTapGesture {
-//            handleContinuedButtonPressed()
-//        }
-//        .padding()
     }
 }
 
@@ -132,9 +117,8 @@ extension OnboardingView {
         }
     }
 
+
     private func goToTabView() {
-        withAnimation(.spring()) {
-            currentShowView = true
-        }
+        userAlredyOnboarding = true
     }
 }
