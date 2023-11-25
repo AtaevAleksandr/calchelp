@@ -95,22 +95,22 @@ struct FibonacciCalculator: View {
         fib0Reverse = calculateReverse(level: 0)
 
         viewModel.rows = [
-            LisRowViewComponent(value: "100.0% Retracement Value",
+            RowModel(value: "100.0% Retracement Value",
                                 direct: fib100Direct,
                                 reverse: fib100Reverse),
-            LisRowViewComponent(value: "61.8% Retracement Value",
+            RowModel(value: "61.8% Retracement Value",
                                 direct: fib618Direct,
                                 reverse: fib618Reverse),
-            LisRowViewComponent(value: "50.0% Retracement Value",
+            RowModel(value: "50.0% Retracement Value",
                                 direct: fib50Direct,
                                 reverse: fib50Reverse),
-            LisRowViewComponent(value: "38.2% Retracement Value",
+            RowModel(value: "38.2% Retracement Value",
                                 direct: fib382Direct,
                                 reverse: fib382Reverse),
-            LisRowViewComponent(value: "23.6% Retracement Value",
+            RowModel(value: "23.6% Retracement Value",
                                 direct: fib236Direct,
                                 reverse: fib236Reverse),
-            LisRowViewComponent(value: "0.0% Retracement Value",
+            RowModel(value: "0.0% Retracement Value",
                                 direct: fib0Direct,
                                 reverse: fib0Reverse)
         ]

@@ -145,7 +145,7 @@ extension GainLossCalculator {
             TextField("", text: Binding(
                 get: { self.balanceWas },
                 set: { newValue in
-                    self.balanceWas = newValue
+                    self.balanceWas = newValue.replacingOccurrences(of: ",", with: ".")
                     self.calculate()
                 }
             ))
@@ -193,7 +193,7 @@ extension GainLossCalculator {
             TextField("", text: Binding(
                 get: { self.amountOfDiff },
                 set: { newValue in
-                    self.amountOfDiff = newValue
+                    self.amountOfDiff = newValue.replacingOccurrences(of: ",", with: ".")
                     self.calculate()
                 }
             ))
@@ -215,7 +215,7 @@ extension GainLossCalculator {
             TextField("", text: Binding(
                 get: { self.percentageOfDiff },
                 set: { newValue in
-                    self.percentageOfDiff = newValue
+                    self.percentageOfDiff = newValue.replacingOccurrences(of: ",", with: ".")
                     self.calculate()
                 }
             ))
@@ -238,7 +238,7 @@ extension GainLossCalculator {
             TextField("", text: Binding(
                 get: { self.currentBalance },
                 set: { newValue in
-                    self.currentBalance = newValue
+                    self.currentBalance = newValue.replacingOccurrences(of: ",", with: ".")
                     self.calculate()
                 }
             ))

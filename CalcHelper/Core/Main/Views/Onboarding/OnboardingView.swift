@@ -85,7 +85,7 @@ extension OnboardingView {
             goToTabView()
         } else {
             withAnimation(.spring()) {
-                onboardingState += 1
+                self.onboardingState += 1
             }
         }
     }
@@ -96,10 +96,8 @@ extension OnboardingView {
             if let error = error {
                 print ("ERROR: \(error)")
             } else {
-                DispatchQueue.main.asyncAfter(deadline: .now()) {
-                    withAnimation(.spring()) {
-                        onboardingState += 1
-                    }
+                withAnimation(.spring()) {
+                    self.onboardingState += 1
                 }
             }
         }
@@ -108,11 +106,8 @@ extension OnboardingView {
     private func requestReview() {
         if let scene = UIApplication.shared.connectedScenes.first(where: { $0.activationState == .foregroundActive }) as? UIWindowScene {
             SKStoreReviewController.requestReview(in: scene)
-
-            DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
-                withAnimation(.spring()) {
-                    onboardingState += 1
-                }
+            withAnimation(.spring()) {
+                self.onboardingState += 1
             }
         }
     }

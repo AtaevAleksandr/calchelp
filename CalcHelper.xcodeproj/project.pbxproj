@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5B203FFB2B121C5D00BD99CC /* TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B203FFA2B121C5D00BD99CC /* TimerView.swift */; };
+		5B203FFD2B12328F00BD99CC /* SignalRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B203FFC2B12328F00BD99CC /* SignalRowView.swift */; };
 		5B23B01E2B01705A007C6892 /* DemoCalculatorsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B23B01D2B01705A007C6892 /* DemoCalculatorsView.swift */; };
 		5B23B0202B017083007C6892 /* RateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B23B01F2B017083007C6892 /* RateView.swift */; };
 		5B23B0222B017096007C6892 /* GetStartedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B23B0212B017096007C6892 /* GetStartedView.swift */; };
@@ -15,6 +17,9 @@
 		5B27E3292B06CEC7006787C9 /* PrivacyPolicyButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B27E3282B06CEC7006787C9 /* PrivacyPolicyButton.swift */; };
 		5B27E32B2B06CED3006787C9 /* SupportAppButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B27E32A2B06CED3006787C9 /* SupportAppButton.swift */; };
 		5B516A3B2B0A2EA100395CA4 /* RowModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B516A3A2B0A2EA100395CA4 /* RowModel.swift */; };
+		5B6E89DB2B128407000E1AEA /* SignalsStoreManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B6E89DA2B128407000E1AEA /* SignalsStoreManager.swift */; };
+		5B751F812B12388A0093AECB /* SignalViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B751F802B12388A0093AECB /* SignalViewModel.swift */; };
+		5B751F852B12458D0093AECB /* SignalModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B751F842B12458D0093AECB /* SignalModel.swift */; };
 		5B7A2F1E2B05512E00454B14 /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B7A2F1D2B05512E00454B14 /* TabBarView.swift */; };
 		5B7A2F202B05515D00454B14 /* SignalsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B7A2F1F2B05515D00454B14 /* SignalsView.swift */; };
 		5B7A2F242B057C0A00454B14 /* EditorsButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B7A2F232B057C0A00454B14 /* EditorsButton.swift */; };
@@ -35,12 +40,14 @@
 		5BB4DFB72B0125BB00DE827B /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BB4DFB62B0125BB00DE827B /* OnboardingView.swift */; };
 		5BB4DFB92B01280D00DE827B /* DemoTargetsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BB4DFB82B01280D00DE827B /* DemoTargetsView.swift */; };
 		5BB860612B0A9830005D13D3 /* Gain&LossCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BB860602B0A9830005D13D3 /* Gain&LossCalculator.swift */; };
-		5BB860632B0AAE86005D13D3 /* 212.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BB860622B0AAE86005D13D3 /* 212.swift */; };
 		5BD0B8EC2B02AA8900F362B4 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BD0B8EB2B02AA8900F362B4 /* HomeView.swift */; };
 		5BF337662B04074300BE382E /* BackgroundTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF337652B04074300BE382E /* BackgroundTabView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5B203FF92B120ABB00BD99CC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		5B203FFA2B121C5D00BD99CC /* TimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerView.swift; sourceTree = "<group>"; };
+		5B203FFC2B12328F00BD99CC /* SignalRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignalRowView.swift; sourceTree = "<group>"; };
 		5B23B01D2B01705A007C6892 /* DemoCalculatorsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoCalculatorsView.swift; sourceTree = "<group>"; };
 		5B23B01F2B017083007C6892 /* RateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RateView.swift; sourceTree = "<group>"; };
 		5B23B0212B017096007C6892 /* GetStartedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetStartedView.swift; sourceTree = "<group>"; };
@@ -49,6 +56,9 @@
 		5B27E3282B06CEC7006787C9 /* PrivacyPolicyButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivacyPolicyButton.swift; sourceTree = "<group>"; };
 		5B27E32A2B06CED3006787C9 /* SupportAppButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupportAppButton.swift; sourceTree = "<group>"; };
 		5B516A3A2B0A2EA100395CA4 /* RowModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RowModel.swift; sourceTree = "<group>"; };
+		5B6E89DA2B128407000E1AEA /* SignalsStoreManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignalsStoreManager.swift; sourceTree = "<group>"; };
+		5B751F802B12388A0093AECB /* SignalViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignalViewModel.swift; sourceTree = "<group>"; };
+		5B751F842B12458D0093AECB /* SignalModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignalModel.swift; sourceTree = "<group>"; };
 		5B7A2F1D2B05512E00454B14 /* TabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
 		5B7A2F1F2B05515D00454B14 /* SignalsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignalsView.swift; sourceTree = "<group>"; };
 		5B7A2F232B057C0A00454B14 /* EditorsButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditorsButton.swift; sourceTree = "<group>"; };
@@ -70,7 +80,6 @@
 		5BB4DFB62B0125BB00DE827B /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		5BB4DFB82B01280D00DE827B /* DemoTargetsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoTargetsView.swift; sourceTree = "<group>"; };
 		5BB860602B0A9830005D13D3 /* Gain&LossCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Gain&LossCalculator.swift"; sourceTree = "<group>"; };
-		5BB860622B0AAE86005D13D3 /* 212.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 212.swift; sourceTree = "<group>"; };
 		5BD0B8EB2B02AA8900F362B4 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		5BF337652B04074300BE382E /* BackgroundTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundTabView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -119,6 +128,32 @@
 				5B27E32A2B06CED3006787C9 /* SupportAppButton.swift */,
 			);
 			path = SupportButtons;
+			sourceTree = "<group>";
+		};
+		5B751F7D2B12383C0093AECB /* Signals */ = {
+			isa = PBXGroup;
+			children = (
+				5B7A2F1F2B05515D00454B14 /* SignalsView.swift */,
+			);
+			path = Signals;
+			sourceTree = "<group>";
+		};
+		5B751F7E2B12385C0093AECB /* Timer */ = {
+			isa = PBXGroup;
+			children = (
+				5B203FFA2B121C5D00BD99CC /* TimerView.swift */,
+			);
+			path = Timer;
+			sourceTree = "<group>";
+		};
+		5B751F7F2B12386F0093AECB /* ListSignals */ = {
+			isa = PBXGroup;
+			children = (
+				5B203FFC2B12328F00BD99CC /* SignalRowView.swift */,
+				5B751F802B12388A0093AECB /* SignalViewModel.swift */,
+				5B751F842B12458D0093AECB /* SignalModel.swift */,
+			);
+			path = ListSignals;
 			sourceTree = "<group>";
 		};
 		5B7A2F102B05502900454B14 /* TabView */ = {
@@ -223,7 +258,9 @@
 		5B7A2F212B05637300454B14 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				5B7A2F1F2B05515D00454B14 /* SignalsView.swift */,
+				5B751F7D2B12383C0093AECB /* Signals */,
+				5B751F7E2B12385C0093AECB /* Timer */,
+				5B751F7F2B12386F0093AECB /* ListSignals */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -281,11 +318,11 @@
 		5BB4DF8D2B00DE3500DE827B /* CalcHelper */ = {
 			isa = PBXGroup;
 			children = (
+				5B203FF92B120ABB00BD99CC /* Info.plist */,
 				5BB4DF9C2B00DE7200DE827B /* App */,
 				5BB4DF942B00DE3700DE827B /* Preview Content */,
 				5BB4DFA52B00E82700DE827B /* Extensions */,
 				5BB4DFAA2B00F22100DE827B /* Core */,
-				5BB860622B0AAE86005D13D3 /* 212.swift */,
 			);
 			path = CalcHelper;
 			sourceTree = "<group>";
@@ -336,6 +373,7 @@
 			isa = PBXGroup;
 			children = (
 				5BB4DFA62B00E84400DE827B /* Color.swift */,
+				5B6E89DA2B128407000E1AEA /* SignalsStoreManager.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -475,16 +513,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5B203FFB2B121C5D00BD99CC /* TimerView.swift in Sources */,
 				5B7A2F242B057C0A00454B14 /* EditorsButton.swift in Sources */,
 				5B27E3232B06CDA9006787C9 /* StreamsButton.swift in Sources */,
 				5BB4DFAE2B01031400DE827B /* WelcomeView.swift in Sources */,
 				5B7A2F262B057D1900454B14 /* GainAndLossButton.swift in Sources */,
+				5B751F852B12458D0093AECB /* SignalModel.swift in Sources */,
 				5B7FBAAA2B093B65004E049F /* FibonacciCalculator.swift in Sources */,
 				5B7FBAAC2B095365004E049F /* ListRowViewModel.swift in Sources */,
 				5BB4DFA72B00E84400DE827B /* Color.swift in Sources */,
+				5B751F812B12388A0093AECB /* SignalViewModel.swift in Sources */,
 				5BB4DFB92B01280D00DE827B /* DemoTargetsView.swift in Sources */,
 				5B7A2F202B05515D00454B14 /* SignalsView.swift in Sources */,
 				5BB4DFB72B0125BB00DE827B /* OnboardingView.swift in Sources */,
+				5B6E89DB2B128407000E1AEA /* SignalsStoreManager.swift in Sources */,
 				5BB860612B0A9830005D13D3 /* Gain&LossCalculator.swift in Sources */,
 				5B7A2F1E2B05512E00454B14 /* TabBarView.swift in Sources */,
 				5BB4DFB32B01044700DE827B /* BackgroundView.swift in Sources */,
@@ -494,9 +536,9 @@
 				5B7A2F282B057D8700454B14 /* SettingsButton.swift in Sources */,
 				5B516A3B2B0A2EA100395CA4 /* RowModel.swift in Sources */,
 				5B23B0202B017083007C6892 /* RateView.swift in Sources */,
+				5B203FFD2B12328F00BD99CC /* SignalRowView.swift in Sources */,
 				5BF337662B04074300BE382E /* BackgroundTabView.swift in Sources */,
 				5BB4DF8F2B00DE3500DE827B /* CalcHelperApp.swift in Sources */,
-				5BB860632B0AAE86005D13D3 /* 212.swift in Sources */,
 				5B23B0222B017096007C6892 /* GetStartedView.swift in Sources */,
 				5B27E32B2B06CED3006787C9 /* SupportAppButton.swift in Sources */,
 				5BD0B8EC2B02AA8900F362B4 /* HomeView.swift in Sources */,
@@ -561,7 +603,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -618,7 +660,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -639,6 +681,7 @@
 				DEVELOPMENT_TEAM = 695W8CRMKH;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = CalcHelper/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = CalcHelper;
 				INFOPLIST_KEY_NSUserTrackingUsageDescription = "Your data will be used to deliver personalise ads to you.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -675,6 +718,7 @@
 				DEVELOPMENT_TEAM = 695W8CRMKH;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = CalcHelper/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = CalcHelper;
 				INFOPLIST_KEY_NSUserTrackingUsageDescription = "Your data will be used to deliver personalise ads to you.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;

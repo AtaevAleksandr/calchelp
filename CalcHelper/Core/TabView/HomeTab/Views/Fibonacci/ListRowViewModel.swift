@@ -9,5 +9,5 @@ import Foundation
 
 final class ListRowViewModel: ObservableObject {
 
-    @Published var rows: [LisRowViewComponent] = LisRowViewComponent.components
+    @Published var rows: [RowModel] = RowModel.components
 }
