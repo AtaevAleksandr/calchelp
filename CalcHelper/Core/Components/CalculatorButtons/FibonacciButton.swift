@@ -36,7 +36,7 @@ struct FibonacciButton: View {
         .background(Color.theme.backgroundComponents)
         .cornerRadius(16)
         .fullScreenCover(isPresented: $showFibonacci) {
-            FibonacciCalculator(showFibonacci: $showFibonacci)
+            FibonacciCalculator()
         }
     }
 }

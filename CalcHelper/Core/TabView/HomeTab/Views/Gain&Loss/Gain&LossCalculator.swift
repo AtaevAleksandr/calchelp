@@ -9,8 +9,7 @@ import SwiftUI
 
 struct GainLossCalculator: View {
 
-    @Environment(\.dismiss) var dissmiss
-    @Binding var showGainLoss: Bool
+    @Environment(\.dismiss) var dismiss
 
     @State private var balanceWas: String = ""
     @State private var amountOfDiff: String = ""
@@ -55,10 +54,7 @@ struct GainLossCalculator: View {
             .toolbar { dissmissButton }
         }
         .onTapGesture {
-            UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder),
-                                            to: nil,
-                                            from: nil,
-                                            for: nil)
+            self.dissmissKeyboard()
         }
     }
 
@@ -116,7 +112,7 @@ struct GainLossCalculator: View {
 }
 
 #Preview {
-    GainLossCalculator(showGainLoss: .constant(false))
+    GainLossCalculator()
         .preferredColorScheme(.dark)
 }
 
@@ -301,7 +297,7 @@ extension GainLossCalculator {
     private var dissmissButton: some ToolbarContent {
         ToolbarItem(placement: .topBarTrailing) {
             Button {
-                showGainLoss.toggle()
+                dismiss()
             } label: {
                 Image(systemName: "xmark")
                     .resizable()

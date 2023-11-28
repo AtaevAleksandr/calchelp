@@ -26,16 +26,15 @@ struct TimerView: View {
                     if char.isNumber {
                         Text(String(char))
                             .font(.system(size: 44, weight: .bold))
-                            .padding()
-                            .background(
-                                RoundedRectangle(cornerRadius: 8)
-                                    .fill(Color.theme.customMint)
-                                    .frame(width: 55, height: 72)
-                            )
+                            .frame(width: 55, height: 72)
                             .foregroundColor(.white)
+                            .background(Color.theme.customMint)
+                            .cornerRadius(10)
+                            .padding(.horizontal, 4)
                     } else {
                         Text(String(char))
                             .font(.system(size: 50, weight: .bold))
+                            .padding(.horizontal, 4)
                     }
                 }
             }

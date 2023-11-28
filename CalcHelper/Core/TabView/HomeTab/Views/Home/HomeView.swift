@@ -17,6 +17,7 @@ struct HomeView: View {
                 VStack(alignment: .leading) {
                     TradingView()
                     CalculatorsView()
+                    SettingView()
                     Spacer()
                 }
                 .padding()
@@ -53,7 +54,12 @@ struct CalculatorsView: View {
         VStack {
             FibonacciButton(title: "Fibonacci Calculator", iconImage: "Fibonacci")
             GainAndLossButton(title: "Gain & Loss", iconImage: "GainLoss")
-            SettingsButton(title: "Settings", iconImage: "Settings")
         }
+    }
+}
+
+struct SettingView: View {
+    var body: some View {
+        SettingsButton(title: "Settings", iconImage: "Settings")
     }
 }

@@ -16,10 +16,25 @@ struct GetStartedView: View {
                 .opacity(0.4)
                 .blur(radius: 65)
 
-            Image("GetReady")
-                .resizable()
-                .scaledToFit()
-                .padding(.horizontal)
+            ZStack {
+                RoundedRectangle(cornerRadius: 10)
+                    .fill(Color.theme.backgroundComponents)
+                    .frame(maxWidth: .infinity)
+                    .padding(.horizontal)
+                    .frame(height: 249)
+
+                VStack(spacing: 16) {
+                    Image("Heart")
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 60, height: 60)
+
+                    Text("The application is ready, \nwe are glad that you \nchose us!")
+                        .font(.system(size: 24, weight: .bold))
+                        .foregroundStyle(.white)
+                        .multilineTextAlignment(.center)
+                }
+            }
         }
     }
 }

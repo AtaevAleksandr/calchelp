@@ -9,10 +9,14 @@ import SwiftUI
 
 @main
 struct CalcHelperApp: App {
+
+    @StateObject private var vm = SignalViewModel()
+
     var body: some Scene {
         WindowGroup {
             LoadingView()
                 .preferredColorScheme(.dark)
+                .environmentObject(vm)
         }
     }
 }

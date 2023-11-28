@@ -9,8 +9,7 @@ import SwiftUI
 
 struct SettingsView: View {
 
-    @Environment(\.dismiss) var dissmiss
-    @Binding var showSettings: Bool
+    @Environment(\.dismiss) var dismiss
 
     var body: some View {
         NavigationView {
@@ -33,7 +32,7 @@ struct SettingsView: View {
 }
 
 #Preview {
-    SettingsView(showSettings: .constant(false))
+    SettingsView()
         .preferredColorScheme(.dark)
 }
 
@@ -42,7 +41,7 @@ extension SettingsView {
     private var dissmissButton: some ToolbarContent {
         ToolbarItem(placement: .topBarTrailing) {
             Button {
-                showSettings.toggle()
+                dismiss()
             } label: {
                 Image(systemName: "xmark")
                     .resizable()

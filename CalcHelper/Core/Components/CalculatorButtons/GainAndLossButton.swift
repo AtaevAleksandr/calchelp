@@ -36,7 +36,7 @@ struct GainAndLossButton: View {
         .background(Color.theme.backgroundComponents)
         .cornerRadius(16)
         .fullScreenCover(isPresented: $showGainLoss) {
-            GainLossCalculator(showGainLoss: $showGainLoss)
+            GainLossCalculator()
         }
     }
 }

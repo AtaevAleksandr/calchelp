@@ -9,11 +9,16 @@ import SwiftUI
 
 struct FibonacciCalculator: View {
 
-    @Environment(\.dismiss) var dissmiss
-    @Binding var showFibonacci: Bool
+    @Environment(\.dismiss) var dismiss
+
+    enum priceFields: Hashable {
+        case high
+        case low
+    }
 
     @State private var highPrice: String = ""
     @State private var lowPrice: String = ""
+    @FocusState private var fieldInFocus: priceFields?
     @StateObject private var viewModel: ListRowViewModel = ListRowViewModel()
 
     @State private var fib100Direct: Double = 0
@@ -64,10 +69,7 @@ struct FibonacciCalculator: View {
             .toolbar { dissmissButton }
         }
         .onTapGesture {
-            UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder),
-                                            to: nil,
-                                            from: nil,
-                                            for: nil)
+            self.dissmissKeyboard()
         }
     }
 
@@ -96,23 +98,23 @@ struct FibonacciCalculator: View {
 
         viewModel.rows = [
             RowModel(value: "100.0% Retracement Value",
-                                direct: fib100Direct,
-                                reverse: fib100Reverse),
+                     direct: fib100Direct,
+                     reverse: fib100Reverse),
             RowModel(value: "61.8% Retracement Value",
-                                direct: fib618Direct,
-                                reverse: fib618Reverse),
+                     direct: fib618Direct,
+                     reverse: fib618Reverse),
             RowModel(value: "50.0% Retracement Value",
-                                direct: fib50Direct,
-                                reverse: fib50Reverse),
+                     direct: fib50Direct,
+                     reverse: fib50Reverse),
             RowModel(value: "38.2% Retracement Value",
-                                direct: fib382Direct,
-                                reverse: fib382Reverse),
+                     direct: fib382Direct,
+                     reverse: fib382Reverse),
             RowModel(value: "23.6% Retracement Value",
-                                direct: fib236Direct,
-                                reverse: fib236Reverse),
+                     direct: fib236Direct,
+                     reverse: fib236Reverse),
             RowModel(value: "0.0% Retracement Value",
-                                direct: fib0Direct,
-                                reverse: fib0Reverse)
+                     direct: fib0Direct,
+                     reverse: fib0Reverse)
         ]
 
         highPrice = ""
@@ -130,8 +132,18 @@ struct FibonacciCalculator: View {
 }
 
 #Preview {
-    FibonacciCalculator(showFibonacci: .constant(false))
+    FibonacciCalculator()
         .preferredColorScheme(.dark)
+}
+
+//MARK: Dissmiss Keyboard
+extension View {
+    func dissmissKeyboard() {
+        UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder),
+                                        to: nil,
+                                        from: nil,
+                                        for: nil)
+    }
 }
 
 //MARK: COMPONENTS
@@ -155,6 +167,7 @@ extension FibonacciCalculator {
                 .foregroundStyle(.white)
 
             TextField("", text: $highPrice)
+                .focused($fieldInFocus, equals: .high)
                 .padding(.horizontal)
                 .frame(height: 45)
                 .background(Color.theme.backgroundComponents)
@@ -177,6 +190,7 @@ extension FibonacciCalculator {
                 .foregroundStyle(.white)
 
             TextField("", text: $lowPrice)
+                .focused($fieldInFocus, equals: .low)
                 .padding(.horizontal)
                 .frame(height: 45)
                 .background(Color.theme.backgroundComponents)
@@ -196,6 +210,7 @@ extension FibonacciCalculator {
         Button {
             withAnimation(.spring) {
                 calculateFibonacciLevels()
+                self.fieldInFocus = nil
             }
         } label: {
             Text("Calculate")
@@ -213,7 +228,7 @@ extension FibonacciCalculator {
     private var dissmissButton: some ToolbarContent {
         ToolbarItem(placement: .topBarTrailing) {
             Button {
-                showFibonacci.toggle()
+                dismiss()
             } label: {
                 Image(systemName: "xmark")
                     .resizable()
@@ -226,14 +241,14 @@ extension FibonacciCalculator {
     }
 
     private var columnTitles: some View {
-        HStack {
+        HStack(spacing: 20) {
             Text("Results")
                 .foregroundStyle(.white)
                 .font(.system(size: 16, weight: .regular))
             Spacer()
             Text("Direct")
             Text("Reverse")
-                .frame(width: UIScreen.main.bounds.width / 6.0, alignment: .trailing)
+                .padding(.trailing, 6)
         }
         .font(.system(size: 14, weight: .regular))
         .foregroundStyle(.gray)

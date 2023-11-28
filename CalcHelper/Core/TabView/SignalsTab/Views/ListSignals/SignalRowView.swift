@@ -9,43 +9,39 @@ import SwiftUI
 
 struct SignalRowView: View {
 
-    @StateObject var viewModel: SignalViewModel = SignalViewModel()
+    let signal: SignalModel
 
     var body: some View {
         VStack {
-            ScrollView(showsIndicators: false) {
-                ForEach(viewModel.randomSignals) { signal in
-                    HStack {
-                        Image(signal.iconImage)
-                            .resizable()
-                            .scaledToFit()
-                            .frame(width: 40, height: 40)
+            HStack {
+                Image(signal.iconImage)
+                    .resizable()
+                    .scaledToFit()
+                    .frame(width: 40, height: 40)
 
-                        Text(signal.name)
-                            .font(.system(size: 16, weight: .medium))
+                Text(signal.name)
+                    .font(.system(size: 16, weight: .medium))
 
-                        Spacer()
+                Spacer()
 
-                        Text(signal.status.displayText)
-                            .font(.system(size: 14, weight: .medium))
-                            .padding(.horizontal)
-                            .frame(height: 25)
-                            .background(
-                                signal.status.backgroundColor
-                            )
-                            .cornerRadius(10)
-                    }
-                    .padding()
-                    .frame(maxWidth: .infinity)
-                    .background(Color.theme.backgroundComponents)
-                    .cornerRadius(16)
-                }
+                Text(signal.status.displayText)
+                    .font(.system(size: 14, weight: .medium))
+                    .padding(.horizontal)
+                    .frame(height: 25)
+                    .background(
+                        signal.status.backgroundColor
+                    )
+                    .cornerRadius(10)
             }
+            .padding()
+            .frame(maxWidth: .infinity)
+            .background(Color.theme.backgroundComponents)
+            .cornerRadius(16)
         }
     }
 }
 
 #Preview {
-    SignalRowView()
+    SignalRowView(signal: .init(iconImage: "AUD:CAD", name: "AUD/CAD", status: .randomStatus()))
         .preferredColorScheme(.dark)
 }

@@ -26,12 +26,8 @@ struct DemoCalculatorsView: View {
                     .offset(y: 16)
                 
                 VStack(alignment: .leading) {
-                    Text("Calculators")
-                        .font(.system(size: 18, weight: .medium))
-
-                    Image("DemoCalculators")
-                        .resizable()
-                        .scaledToFit()
+                    CalculatorsView()
+                        .disabled(true)
                 }
                 .padding(.horizontal)
             }

@@ -31,12 +31,8 @@ struct DemoTargetsView: View {
                     .offset(y: 20)
 
                 VStack(alignment: .leading) {
-                    Text("Trading view")
-                        .font(.system(size: 18, weight: .medium))
-
-                    Image("DemoTargets")
-                        .resizable()
-                        .scaledToFit()
+                    TradingView()
+                        .disabled(true)
                 }
                 .padding(.horizontal)
             }

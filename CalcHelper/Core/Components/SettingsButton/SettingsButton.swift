@@ -36,7 +36,7 @@ struct SettingsButton: View {
         .background(Color.theme.backgroundComponents)
         .cornerRadius(16)
         .fullScreenCover(isPresented: $showSettings) {
-            SettingsView(showSettings: $showSettings)
+            SettingsView()
         }
     }
 }
