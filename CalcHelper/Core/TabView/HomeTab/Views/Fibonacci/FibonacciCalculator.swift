@@ -69,7 +69,7 @@ struct FibonacciCalculator: View {
             .toolbar { dissmissButton }
         }
         .onTapGesture {
-            self.dissmissKeyboard()
+            self.fieldInFocus = nil
         }
     }
 
@@ -134,16 +134,6 @@ struct FibonacciCalculator: View {
 #Preview {
     FibonacciCalculator()
         .preferredColorScheme(.dark)
-}
-
-//MARK: Dissmiss Keyboard
-extension View {
-    func dissmissKeyboard() {
-        UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder),
-                                        to: nil,
-                                        from: nil,
-                                        for: nil)
-    }
 }
 
 //MARK: COMPONENTS

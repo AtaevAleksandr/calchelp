@@ -11,6 +11,15 @@ struct GainLossCalculator: View {
 
     @Environment(\.dismiss) var dismiss
 
+    enum calculateFields: Hashable {
+        case balanceWas
+        case amount
+        case percentage
+        case currentBalance
+    }
+
+    @FocusState private var fieldInFocus: calculateFields?
+
     @State private var balanceWas: String = ""
     @State private var amountOfDiff: String = ""
     @State private var percentageOfDiff: String = ""
@@ -54,7 +63,7 @@ struct GainLossCalculator: View {
             .toolbar { dissmissButton }
         }
         .onTapGesture {
-            self.dissmissKeyboard()
+            self.fieldInFocus = nil
         }
     }
 
@@ -118,6 +127,39 @@ struct GainLossCalculator: View {
 
 //MARK: COMPONENTS
 extension GainLossCalculator {
+
+    private var wonResult: some View {
+        HStack {
+            Text("You can now afford to lose ")
+                .font(.system(size: 14, weight: .regular))
+                .foregroundColor(.white)
+            +
+            Text("\(String(format: "%.1f", (percentageOfResult * 10).rounded() / 10.0))%")
+                .font(.system(size: 14, weight: .regular))
+                .foregroundColor(Color.theme.customRed)
+            +
+            Text(", before getting back to your starting balance.")
+                .font(.system(size: 14, weight: .regular))
+                .foregroundColor(.white)
+        }
+    }
+
+    private var lostResult: some View {
+        HStack {
+            Text("You will have to win ")
+                .font(.system(size: 14, weight: .regular))
+                .foregroundColor(.white)
+            +
+            Text("\(String(format: "%.1f", (percentageOfResult * 10).rounded() / 10.0))%")
+                .font(.system(size: 14, weight: .regular))
+                .foregroundColor(Color.theme.customGreen)
+            +
+            Text(", to get back to your starting balance.")
+                .font(.system(size: 14, weight: .regular))
+                .foregroundColor(.white)
+        }
+    }
+
     private var descriptionText: some View {
         Text("""
              This online gain and loss percentage calculator quickly tells you what percentage of the account balance you have won or lost. It also estimates a percentage of current balance required to get to the breakeven point again. Alternatively, you can enter the percentages and see the size of your gain or loss in currency.
@@ -145,6 +187,7 @@ extension GainLossCalculator {
                     self.calculate()
                 }
             ))
+            .focused($fieldInFocus, equals: .balanceWas)
             .padding(.horizontal)
             .frame(height: 45)
             .background(Color.theme.backgroundComponents)
@@ -168,7 +211,8 @@ extension GainLossCalculator {
 
             Button {
                 isWon.toggle()
-                calculate()
+                self.calculate()
+                self.fieldInFocus = nil
             } label: {
                 Text(isWon ? "Won" : "Lost")
                     .font(.headline)
@@ -193,6 +237,7 @@ extension GainLossCalculator {
                     self.calculate()
                 }
             ))
+            .focused($fieldInFocus, equals: .amount)
             .padding(.horizontal)
             .frame(height: 45)
             .background(Color.theme.backgroundComponents)
@@ -215,6 +260,7 @@ extension GainLossCalculator {
                     self.calculate()
                 }
             ))
+            .focused($fieldInFocus, equals: .percentage)
             .font(.headline)
             .padding(.horizontal)
             .foregroundStyle(.white)
@@ -238,18 +284,19 @@ extension GainLossCalculator {
                     self.calculate()
                 }
             ))
-                .padding(.horizontal)
-                .frame(height: 45)
-                .background(Color.theme.backgroundComponents)
-                .overlay(
-                    HStack {
-                        Spacer()
-                        Text("*")
-                            .padding(.trailing, 10)
-                    }
-                )
-                .cornerRadius(10)
-                .keyboardType(.decimalPad)
+            .focused($fieldInFocus, equals: .currentBalance)
+            .padding(.horizontal)
+            .frame(height: 45)
+            .background(Color.theme.backgroundComponents)
+            .overlay(
+                HStack {
+                    Spacer()
+                    Text("*")
+                        .padding(.trailing, 10)
+                }
+            )
+            .cornerRadius(10)
+            .keyboardType(.decimalPad)
         }
     }
 
@@ -261,35 +308,15 @@ extension GainLossCalculator {
 
             HStack {
                 if isWon {
-                    Text("You can now afford to lose ")
-                        .font(.system(size: 14, weight: .regular))
-                        .foregroundColor(.white)
-                    +
-                    Text("\(String(format: "%.1f", (percentageOfResult * 10).rounded() / 10.0))%")
-                        .font(.system(size: 14, weight: .regular))
-                        .foregroundColor(Color.theme.customRed)
-                    +
-                    Text(", before getting back to your starting balance.")
-                        .font(.system(size: 14, weight: .regular))
-                        .foregroundColor(.white)
+                    wonResult
                 } else {
-                    Text("You will have to win ")
-                        .font(.system(size: 14, weight: .regular))
-                        .foregroundColor(.white)
-                    +
-                    Text("\(String(format: "%.1f", (percentageOfResult * 10).rounded() / 10.0))%")
-                        .font(.system(size: 14, weight: .regular))
-                        .foregroundColor(Color.theme.customGreen)
-                    +
-                    Text(", to get back to your starting balance.")
-                        .font(.system(size: 14, weight: .regular))
-                        .foregroundColor(.white)
+                    lostResult
                 }
             }
-                .padding()
-                .frame(maxWidth: .infinity)
-                .background(Color.theme.backgroundComponents)
-                .cornerRadius(16)
+            .padding()
+            .frame(maxWidth: .infinity)
+            .background(Color.theme.backgroundComponents)
+            .cornerRadius(16)
         }
         .padding(.top)
     }
