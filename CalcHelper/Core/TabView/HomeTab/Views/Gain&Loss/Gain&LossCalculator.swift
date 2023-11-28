@@ -68,7 +68,7 @@ struct GainLossCalculator: View {
     }
 
     //MARK: FUNCTIONS
-    func calculate() {
+    func calculateCurrent() {
         if let initial = Double(balanceWas), var current = Double(currentBalance) {
             let updatePercentage = abs((current - initial) / initial) * 100
             let updateAmount = abs(current - initial)
@@ -82,24 +82,11 @@ struct GainLossCalculator: View {
             percentageOfDiff = String(format: "%.1f", updatePercentage)
             amountOfDiff = String(format: "%.2f", updateAmount)
             currentBalance = String(format: "%.2f", current)
-            showResult = true
+        }
+    }
 
-        } else if let initial = Double(balanceWas), let percentage = Double(percentageOfDiff) {
-            var updatedBalance = initial + ((percentage / 100) * initial)
-            let updateAmount = (initial * percentage) / 100
-
-            if isWon {
-                updatedBalance = initial + ((percentage / 100) * initial)
-            } else {
-                updatedBalance = initial - ((percentage / 100) * initial)
-            }
-            percentageOfResult = (updateAmount * 100) / updatedBalance
-            percentageOfDiff = String(format: "%.1f", percentage)
-            amountOfDiff = String(format: "%.2f", updateAmount)
-            currentBalance = String(format: "%.2f", updatedBalance)
-            showResult = true
-
-        } else if let initial = Double(balanceWas), let diff = Double(amountOfDiff) {
+    func calculateAmount() {
+        if let initial = Double(balanceWas), let diff = Double(amountOfDiff) {
             var updatedBalance = initial + diff
             let updatePercentage = (diff / initial) * 100
 
@@ -112,10 +99,23 @@ struct GainLossCalculator: View {
             percentageOfDiff = String(format: "%.2f", updatePercentage)
             amountOfDiff = String(format: "%.2f", diff)
             currentBalance = String(format: "%.2f", updatedBalance)
-            showResult = true
+        }
+    }
 
-        } else {
-            showResult = false
+    func calculatePercentage() {
+        if let initial = Double(balanceWas), let percentage = Double(percentageOfDiff) {
+            var updatedBalance = initial + ((percentage / 100) * initial)
+            let updateAmount = (initial * percentage) / 100
+
+            if isWon {
+                updatedBalance = initial + ((percentage / 100) * initial)
+            } else {
+                updatedBalance = initial - ((percentage / 100) * initial)
+            }
+            percentageOfResult = (updateAmount * 100) / updatedBalance
+            percentageOfDiff = String(format: "%.1f", percentage)
+            amountOfDiff = String(format: "%.2f", updateAmount)
+            currentBalance = String(format: "%.2f", updatedBalance)
         }
     }
 }
@@ -184,7 +184,19 @@ extension GainLossCalculator {
                 get: { self.balanceWas },
                 set: { newValue in
                     self.balanceWas = newValue.replacingOccurrences(of: ",", with: ".")
-                    self.calculate()
+
+                    if !self.balanceWas.isEmpty && !self.currentBalance.isEmpty {
+                        self.calculateCurrent()
+                        showResult = true
+                    } else if !self.balanceWas.isEmpty && !self.amountOfDiff.isEmpty {
+                        self.calculateAmount()
+                        showResult = true
+                    } else if !self.balanceWas.isEmpty && !self.percentageOfDiff.isEmpty {
+                        self.calculatePercentage()
+                        showResult = true
+                    } else {
+                        showResult = false
+                    }
                 }
             ))
             .focused($fieldInFocus, equals: .balanceWas)
@@ -211,7 +223,20 @@ extension GainLossCalculator {
 
             Button {
                 isWon.toggle()
-                self.calculate()
+
+                if !self.balanceWas.isEmpty && !self.currentBalance.isEmpty {
+                    self.calculateCurrent()
+                    showResult = true
+                } else if !self.balanceWas.isEmpty && !self.amountOfDiff.isEmpty {
+                    self.calculateAmount()
+                    showResult = true
+                } else if !self.balanceWas.isEmpty && !self.percentageOfDiff.isEmpty {
+                    self.calculatePercentage()
+                    showResult = true
+                } else {
+                    showResult = false
+                }
+
                 self.fieldInFocus = nil
             } label: {
                 Text(isWon ? "Won" : "Lost")
@@ -234,7 +259,13 @@ extension GainLossCalculator {
                 get: { self.amountOfDiff },
                 set: { newValue in
                     self.amountOfDiff = newValue.replacingOccurrences(of: ",", with: ".")
-                    self.calculate()
+
+                    if !self.balanceWas.isEmpty && !self.amountOfDiff.isEmpty {
+                        self.calculateAmount()
+                        showResult = true
+                    } else {
+                        showResult = false
+                    }
                 }
             ))
             .focused($fieldInFocus, equals: .amount)
@@ -257,7 +288,13 @@ extension GainLossCalculator {
                 get: { self.percentageOfDiff },
                 set: { newValue in
                     self.percentageOfDiff = newValue.replacingOccurrences(of: ",", with: ".")
-                    self.calculate()
+
+                    if !self.balanceWas.isEmpty && !self.percentageOfDiff.isEmpty {
+                        self.calculatePercentage()
+                        showResult = true
+                    } else {
+                        showResult = false
+                    }
                 }
             ))
             .focused($fieldInFocus, equals: .percentage)
@@ -281,7 +318,13 @@ extension GainLossCalculator {
                 get: { self.currentBalance },
                 set: { newValue in
                     self.currentBalance = newValue.replacingOccurrences(of: ",", with: ".")
-                    self.calculate()
+
+                    if !self.balanceWas.isEmpty && !self.currentBalance.isEmpty {
+                        self.calculateCurrent()
+                        showResult = true
+                    } else {
+                        showResult = false
+                    }
                 }
             ))
             .focused($fieldInFocus, equals: .currentBalance)
