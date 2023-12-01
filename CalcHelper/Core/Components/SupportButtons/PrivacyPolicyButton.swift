@@ -8,13 +8,13 @@
 import SwiftUI
 
 struct PrivacyPolicyButton: View {
-    
+
     @State var title: String
     @State var iconImage: String
 
     var body: some View {
         Button {
-            //TODO: Next View
+            openLink()
         } label: {
             HStack() {
                 Image(iconImage)
@@ -38,6 +38,15 @@ struct PrivacyPolicyButton: View {
         .foregroundStyle(.white)
         .background(Color.theme.backgroundComponents)
         .cornerRadius(16)
+    }
+
+    func openLink() {
+        let urlString = "https://www.freeprivacypolicy.com/live/7af38c28-4f06-49cc-8540-3ea9e2ecfbca"
+        if let url = URL(string: urlString) {
+            if UIApplication.shared.canOpenURL(url) {
+                UIApplication.shared.open(url, options: [:], completionHandler: nil)
+            }
+        }
     }
 }
 

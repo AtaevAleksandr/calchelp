@@ -14,7 +14,7 @@ struct SupportAppButton: View {
 
     var body: some View {
         Button {
-            //TODO: Next View
+            openLink()
         } label: {
             HStack() {
                 Image(iconImage)
@@ -38,6 +38,15 @@ struct SupportAppButton: View {
         .foregroundStyle(.white)
         .background(Color.theme.backgroundComponents)
         .cornerRadius(16)
+    }
+
+    func openLink() {
+        let urlString = "https://docs.google.com/forms/d/e/1FAIpQLSexy6TpnM9LurmsT6tiHdkcVMXTgx4J-XtfWQR2B84_cZaTzQ/viewform"
+        if let url = URL(string: urlString) {
+            if UIApplication.shared.canOpenURL(url) {
+                UIApplication.shared.open(url, options: [:], completionHandler: nil)
+            }
+        }
     }
 }
 

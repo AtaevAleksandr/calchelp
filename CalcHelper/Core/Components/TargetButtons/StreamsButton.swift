@@ -8,13 +8,13 @@
 import SwiftUI
 
 struct StreamsButton: View {
-    
+
     @State var title: String
     @State var iconImage: String
 
     var body: some View {
         Button {
-            //TODO: Link on target
+            openLink()
         } label: {
             VStack(alignment: .center) {
                 Image(iconImage)
@@ -32,6 +32,15 @@ struct StreamsButton: View {
         .foregroundStyle(.white)
         .background(Color.theme.backgroundComponents)
         .cornerRadius(16)
+    }
+
+    func openLink() {
+        let urlString = "https://www.tradingview.com/streams/"
+        if let url = URL(string: urlString) {
+            if UIApplication.shared.canOpenURL(url) {
+                UIApplication.shared.open(url, options: [:], completionHandler: nil)
+            }
+        }
     }
 }
 

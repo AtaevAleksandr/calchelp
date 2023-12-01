@@ -14,7 +14,7 @@ struct EditorsButton: View {
 
     var body: some View {
         Button {
-            //TODO: Link on target
+            openLink()
         } label: {
             VStack(alignment: .center) {
                 Image(iconImage)
@@ -32,6 +32,15 @@ struct EditorsButton: View {
         .foregroundStyle(.white)
         .background(Color.theme.backgroundComponents)
         .cornerRadius(16)
+    }
+
+    func openLink() {
+        let urlString = "https://www.tradingview.com/scripts/editors-picks/?script_type=all"
+        if let url = URL(string: urlString) {
+            if UIApplication.shared.canOpenURL(url) {
+                UIApplication.shared.open(url, options: [:], completionHandler: nil)
+            }
+        }
     }
 }
 

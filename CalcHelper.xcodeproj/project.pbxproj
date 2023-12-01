@@ -17,7 +17,6 @@
 		5B27E3292B06CEC7006787C9 /* PrivacyPolicyButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B27E3282B06CEC7006787C9 /* PrivacyPolicyButton.swift */; };
 		5B27E32B2B06CED3006787C9 /* SupportAppButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B27E32A2B06CED3006787C9 /* SupportAppButton.swift */; };
 		5B516A3B2B0A2EA100395CA4 /* RowModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B516A3A2B0A2EA100395CA4 /* RowModel.swift */; };
-		5B6E89DB2B128407000E1AEA /* SignalsStoreManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B6E89DA2B128407000E1AEA /* SignalsStoreManager.swift */; };
 		5B751F812B12388A0093AECB /* SignalViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B751F802B12388A0093AECB /* SignalViewModel.swift */; };
 		5B751F852B12458D0093AECB /* SignalModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B751F842B12458D0093AECB /* SignalModel.swift */; };
 		5B7A2F1E2B05512E00454B14 /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B7A2F1D2B05512E00454B14 /* TabBarView.swift */; };
@@ -56,7 +55,6 @@
 		5B27E3282B06CEC7006787C9 /* PrivacyPolicyButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivacyPolicyButton.swift; sourceTree = "<group>"; };
 		5B27E32A2B06CED3006787C9 /* SupportAppButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupportAppButton.swift; sourceTree = "<group>"; };
 		5B516A3A2B0A2EA100395CA4 /* RowModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RowModel.swift; sourceTree = "<group>"; };
-		5B6E89DA2B128407000E1AEA /* SignalsStoreManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignalsStoreManager.swift; sourceTree = "<group>"; };
 		5B751F802B12388A0093AECB /* SignalViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignalViewModel.swift; sourceTree = "<group>"; };
 		5B751F842B12458D0093AECB /* SignalModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignalModel.swift; sourceTree = "<group>"; };
 		5B7A2F1D2B05512E00454B14 /* TabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
@@ -373,7 +371,6 @@
 			isa = PBXGroup;
 			children = (
 				5BB4DFA62B00E84400DE827B /* Color.swift */,
-				5B6E89DA2B128407000E1AEA /* SignalsStoreManager.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -526,7 +523,6 @@
 				5BB4DFB92B01280D00DE827B /* DemoTargetsView.swift in Sources */,
 				5B7A2F202B05515D00454B14 /* SignalsView.swift in Sources */,
 				5BB4DFB72B0125BB00DE827B /* OnboardingView.swift in Sources */,
-				5B6E89DB2B128407000E1AEA /* SignalsStoreManager.swift in Sources */,
 				5BB860612B0A9830005D13D3 /* Gain&LossCalculator.swift in Sources */,
 				5B7A2F1E2B05512E00454B14 /* TabBarView.swift in Sources */,
 				5BB4DFB32B01044700DE827B /* BackgroundView.swift in Sources */,
