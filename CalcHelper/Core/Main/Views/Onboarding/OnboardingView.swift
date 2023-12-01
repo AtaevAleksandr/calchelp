@@ -11,7 +11,7 @@ import StoreKit
 
 struct OnboardingView: View {
 
-    @AppStorage("isAlredyOnboarding") var userAlredyOnboarding: Bool = false
+    @AppStorage("isAlredyOnboarding") var isAlredyOnboarding: Bool = false
 
     @State private var onboardingState: Int = 0
     @State private var notificationAuthorization: Bool = false
@@ -114,6 +114,6 @@ extension OnboardingView {
 
 
     private func goToTabView() {
-        userAlredyOnboarding = true
+        isAlredyOnboarding = true
     }
 }

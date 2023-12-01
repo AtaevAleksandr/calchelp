@@ -10,28 +10,32 @@ import AppTrackingTransparency
 
 struct LoadingView: View {
 
-    @AppStorage("isAlredyOnboarding") var userAlredyOnboarding: Bool = false
+    @AppStorage("isAlredyOnboarding") var isAlredyOnboarding: Bool = false
 
+    @State private var isInitialLoadingCompleted: Bool = false
     @State private var isLoading: Bool = false
     @State private var rotation: Double = 0
 
     var body: some View {
-
-        if userAlredyOnboarding {
-            TabBarView()
-        } else {
-            ZStack {
+        ZStack {
+            if isAlredyOnboarding && isInitialLoadingCompleted {
+                TabBarView()
+            } else {
                 OnboardingView()
+            }
 
-                if isLoading {
-                    ZStack {
-                        Color.theme.background
-                            .ignoresSafeArea()
-                        spinner
-                    }
+            if isLoading {
+                ZStack {
+                    Color.theme.background
+                        .ignoresSafeArea()
+                    spinner
                 }
             }
-            .onAppear() { fakeStartLoading() }
+        }
+        .onAppear() {
+            if !isInitialLoadingCompleted {
+                fakeStartLoading()
+            }
         }
     }
 
@@ -42,6 +46,7 @@ struct LoadingView: View {
         }
         Timer.scheduledTimer(withTimeInterval: 3, repeats: false) { _ in
             isLoading = false
+            isInitialLoadingCompleted = true
         }
     }
 
