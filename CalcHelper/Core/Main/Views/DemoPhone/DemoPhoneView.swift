@@ -15,6 +15,7 @@ struct DemoPhoneView: View {
                 .foregroundStyle(.white)
                 .multilineTextAlignment(.center)
                 .padding(.top)
+                .padding(.horizontal)
             Spacer()
 
             ZStack {

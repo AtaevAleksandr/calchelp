@@ -1,13 +1,13 @@
 //
-//  GetStartedView.swift
+//  RegistrationSuccessView.swift
 //  CalcHelper
 //
-//  Created by Aleksandr Ataev on 12.11.2023.
+//  Created by Aleksandr Ataev on 05.12.2023.
 //
 
 import SwiftUI
 
-struct GetStartedView: View {
+struct RegistrationSuccessView: View {
     var body: some View {
         ZStack {
             Ellipse()
@@ -24,12 +24,12 @@ struct GetStartedView: View {
                     .frame(height: 249)
 
                 VStack(spacing: 16) {
-                    Image("Heart")
+                    Image("Registration")
                         .resizable()
                         .scaledToFit()
                         .frame(width: 60, height: 60)
 
-                    Text("The application is ready, \nwe are glad that you \nchose us!")
+                    Text("Registration completed. \nGreat job!")
                         .font(.system(size: 24, weight: .bold))
                         .foregroundStyle(.white)
                         .multilineTextAlignment(.center)
@@ -42,6 +42,6 @@ struct GetStartedView: View {
 #Preview {
     ZStack {
         BackgroundView()
-        GetStartedView()
+        RegistrationSuccessView()
     }
 }

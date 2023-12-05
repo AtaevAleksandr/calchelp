@@ -14,6 +14,7 @@ struct RateView: View {
                 .font(.system(size: 24, weight: .bold))
                 .multilineTextAlignment(.center)
                 .padding(.top)
+                .padding(.horizontal)
             Spacer()
 
             ZStack {
@@ -28,7 +29,8 @@ struct RateView: View {
                     Text("Other users about us")
                         .font(.system(size: 18, weight: .bold))
                         .padding(.bottom, 24)
-                    
+                        .padding(.horizontal)
+
                     Image("MockFeedback")
                         .resizable()
                         .scaledToFit()

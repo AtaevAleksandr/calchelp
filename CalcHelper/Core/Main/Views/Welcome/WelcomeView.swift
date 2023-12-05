@@ -30,6 +30,7 @@ struct WelcomeView: View {
             Spacer()
         }
         .foregroundStyle(.white)
+        .padding(.horizontal)
     }
 }
 

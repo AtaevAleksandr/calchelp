@@ -14,6 +14,7 @@ struct DemoCalculatorsView: View {
                 .font(.system(size: 24, weight: .bold))
                 .multilineTextAlignment(.center)
                 .padding(.top)
+                .padding(.horizontal)
             Spacer()
             Spacer()
 
