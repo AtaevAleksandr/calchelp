@@ -62,6 +62,9 @@ struct FibonacciCalculator: View {
                         listOfValues
                     }
                     .padding()
+                    .onAppear {
+                        self.fieldInFocus = .high
+                    }
                 }
             }
             .navigationTitle("Fibonacci")

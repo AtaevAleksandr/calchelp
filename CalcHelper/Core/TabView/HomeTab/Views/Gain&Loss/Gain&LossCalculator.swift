@@ -56,6 +56,9 @@ struct GainLossCalculator: View {
                         }
                     }
                     .padding()
+                    .onAppear {
+                        self.fieldInFocus = .balanceWas
+                    }
                 }
             }
             .navigationTitle("Gain & Loss")
@@ -81,7 +84,6 @@ struct GainLossCalculator: View {
             percentageOfResult = (updateAmount * 100) / current
             percentageOfDiff = String(format: "%.1f", updatePercentage)
             amountOfDiff = String(format: "%.2f", updateAmount)
-            currentBalance = String(format: "%.2f", current)
         }
     }
 
@@ -96,8 +98,7 @@ struct GainLossCalculator: View {
                 updatedBalance = initial - diff
             }
             percentageOfResult = (diff * 100) / updatedBalance
-            percentageOfDiff = String(format: "%.2f", updatePercentage)
-            amountOfDiff = String(format: "%.2f", diff)
+            percentageOfDiff = String(format: "%.1f", updatePercentage)
             currentBalance = String(format: "%.2f", updatedBalance)
         }
     }
@@ -113,7 +114,6 @@ struct GainLossCalculator: View {
                 updatedBalance = initial - ((percentage / 100) * initial)
             }
             percentageOfResult = (updateAmount * 100) / updatedBalance
-            percentageOfDiff = String(format: "%.1f", percentage)
             amountOfDiff = String(format: "%.2f", updateAmount)
             currentBalance = String(format: "%.2f", updatedBalance)
         }
@@ -235,6 +235,10 @@ extension GainLossCalculator {
                     showResult = true
                 } else {
                     showResult = false
+                }
+
+                if let initial = Double(balanceWas), let updateAmount = Double(amountOfDiff) {
+                    self.currentBalance = isWon ? String(format: "%.2f", initial + updateAmount) : String(format: "%.2f", initial - updateAmount)
                 }
 
                 self.fieldInFocus = nil
