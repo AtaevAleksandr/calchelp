@@ -14,6 +14,3 @@ struct BackgroundTabView: View {
     }
 }
 
-#Preview {
-    BackgroundTabView()
-}

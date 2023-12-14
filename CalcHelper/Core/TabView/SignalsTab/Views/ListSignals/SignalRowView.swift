@@ -40,8 +40,3 @@ struct SignalRowView: View {
         }
     }
 }
-
-#Preview {
-    SignalRowView(signal: .init(iconImage: "AUD:CAD", name: "AUD/CAD", status: .randomStatus()))
-        .preferredColorScheme(.dark)
-}

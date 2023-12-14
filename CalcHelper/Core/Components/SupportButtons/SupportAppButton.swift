@@ -50,6 +50,3 @@ struct SupportAppButton: View {
     }
 }
 
-#Preview {
-    SupportAppButton(title: "Support App", iconImage: "Support")
-}

@@ -88,11 +88,6 @@ struct SignalsView: View {
     }
 }
 
-#Preview {
-    SignalsView()
-        .environmentObject(SignalViewModel())
-        .preferredColorScheme(.dark)
-}
 
 //MARK: COMPONENTS OF SIGNALSVIEW
 extension SignalsView {

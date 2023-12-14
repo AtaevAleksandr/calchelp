@@ -32,7 +32,3 @@ struct TabBarView: View {
     }
 }
 
-#Preview {
-    TabBarView()
-        .preferredColorScheme(.dark)
-}

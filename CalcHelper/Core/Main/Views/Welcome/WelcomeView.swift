@@ -34,9 +34,3 @@ struct WelcomeView: View {
     }
 }
 
-#Preview {
-    ZStack {
-        BackgroundView()
-        WelcomeView()
-    }
-}

@@ -38,10 +38,3 @@ struct RegistrationSuccessView: View {
         }
     }
 }
-
-#Preview {
-    ZStack {
-        BackgroundView()
-        RegistrationSuccessView()
-    }
-}

@@ -28,11 +28,6 @@ struct HomeView: View {
     }
 }
 
-#Preview {
-    HomeView()
-        .preferredColorScheme(.dark)
-}
-
 struct TradingView: View {
     var body: some View {
         Text("Trading view")

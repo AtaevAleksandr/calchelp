@@ -38,10 +38,3 @@ struct FirstDepositView: View {
         }
     }
 }
-
-#Preview {
-    ZStack {
-        BackgroundView()
-        FirstDepositView()
-    }
-}

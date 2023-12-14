@@ -64,7 +64,3 @@ struct TimerView: View {
     }
 }
 
-#Preview {
-    TimerView()
-        .preferredColorScheme(.dark)
-}

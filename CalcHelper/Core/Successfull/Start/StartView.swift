@@ -28,10 +28,3 @@ struct StartView: View {
         .foregroundStyle(.white)
     }
 }
-
-#Preview {
-    ZStack {
-        BackgroundView()
-        StartView()
-    }
-}

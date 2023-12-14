@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0FA400982B2B775100176AE9 /* SwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA400972B2B775100176AE9 /* SwiftUIView.swift */; };
 		5B203FFB2B121C5D00BD99CC /* TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B203FFA2B121C5D00BD99CC /* TimerView.swift */; };
 		5B203FFD2B12328F00BD99CC /* SignalRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B203FFC2B12328F00BD99CC /* SignalRowView.swift */; };
 		5B23B01E2B01705A007C6892 /* DemoCalculatorsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B23B01D2B01705A007C6892 /* DemoCalculatorsView.swift */; };
@@ -49,6 +50,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0FA400972B2B775100176AE9 /* SwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIView.swift; sourceTree = "<group>"; };
 		5B203FF92B120ABB00BD99CC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		5B203FFA2B121C5D00BD99CC /* TimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerView.swift; sourceTree = "<group>"; };
 		5B203FFC2B12328F00BD99CC /* SignalRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignalRowView.swift; sourceTree = "<group>"; };
@@ -383,6 +385,7 @@
 				5BB4DF942B00DE3700DE827B /* Preview Content */,
 				5BB4DFA52B00E82700DE827B /* Extensions */,
 				5BB4DFAA2B00F22100DE827B /* Core */,
+				0FA400972B2B775100176AE9 /* SwiftUIView.swift */,
 			);
 			path = CalcHelper;
 			sourceTree = "<group>";
@@ -607,6 +610,7 @@
 				5B27E32B2B06CED3006787C9 /* SupportAppButton.swift in Sources */,
 				5BD0B8EC2B02AA8900F362B4 /* HomeView.swift in Sources */,
 				5BA4D15D2B013D5D00B4A10F /* DemoPhoneView.swift in Sources */,
+				0FA400982B2B775100176AE9 /* SwiftUIView.swift in Sources */,
 				5B23B01E2B01705A007C6892 /* DemoCalculatorsView.swift in Sources */,
 				5B9FAD9A2B06C2960061BF21 /* SettingsView.swift in Sources */,
 			);

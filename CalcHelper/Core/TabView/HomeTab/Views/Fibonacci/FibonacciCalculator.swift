@@ -134,11 +134,6 @@ struct FibonacciCalculator: View {
     }
 }
 
-#Preview {
-    FibonacciCalculator()
-        .preferredColorScheme(.dark)
-}
-
 //MARK: COMPONENTS
 extension FibonacciCalculator {
     private var descriptionText: some View {
@@ -201,7 +196,7 @@ extension FibonacciCalculator {
 
     private var calculateButton: some View {
         Button {
-            withAnimation(.spring) {
+            withAnimation(.spring()) {
                 calculateFibonacciLevels()
                 self.fieldInFocus = nil
             }
@@ -219,7 +214,7 @@ extension FibonacciCalculator {
     }
 
     private var dissmissButton: some ToolbarContent {
-        ToolbarItem(placement: .topBarTrailing) {
+        ToolbarItem(placement: .navigationBarTrailing) {
             Button {
                 dismiss()
             } label: {

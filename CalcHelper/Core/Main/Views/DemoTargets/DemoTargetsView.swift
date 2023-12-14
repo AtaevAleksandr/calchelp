@@ -47,9 +47,3 @@ struct DemoTargetsView: View {
     }
 }
 
-#Preview {
-    ZStack {
-        BackgroundView()
-        DemoTargetsView()
-    }
-}

@@ -39,9 +39,3 @@ struct GetStartedView: View {
     }
 }
 
-#Preview {
-    ZStack {
-        BackgroundView()
-        GetStartedView()
-    }
-}

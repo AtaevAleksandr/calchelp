@@ -46,10 +46,3 @@ struct DemoTraderView: View {
         .foregroundStyle(.white)
     }
 }
-
-#Preview {
-    ZStack {
-        BackgroundView()
-        DemoTraderView()
-    }
-}
