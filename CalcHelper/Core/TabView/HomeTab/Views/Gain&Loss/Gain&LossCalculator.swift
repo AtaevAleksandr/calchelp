@@ -120,10 +120,6 @@ struct GainLossCalculator: View {
     }
 }
 
-#Preview {
-    GainLossCalculator()
-        .preferredColorScheme(.dark)
-}
 
 //MARK: COMPONENTS
 extension GainLossCalculator {
@@ -368,7 +364,7 @@ extension GainLossCalculator {
     }
 
     private var dissmissButton: some ToolbarContent {
-        ToolbarItem(placement: .topBarTrailing) {
+        ToolbarItem(placement: .navigationBarTrailing) {
             Button {
                 dismiss()
             } label: {

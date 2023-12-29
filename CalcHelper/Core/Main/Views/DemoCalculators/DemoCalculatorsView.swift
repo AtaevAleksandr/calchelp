@@ -41,9 +41,3 @@ struct DemoCalculatorsView: View {
     }
 }
 
-#Preview {
-    ZStack {
-        BackgroundView()
-        DemoCalculatorsView()
-    }
-}

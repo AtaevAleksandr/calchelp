@@ -31,15 +31,10 @@ struct SettingsView: View {
     }
 }
 
-#Preview {
-    SettingsView()
-        .preferredColorScheme(.dark)
-}
-
 //MARK: COMPONENTS
 extension SettingsView {
     private var dissmissButton: some ToolbarContent {
-        ToolbarItem(placement: .topBarTrailing) {
+        ToolbarItem(placement: .navigationBarTrailing) {
             Button {
                 dismiss()
             } label: {

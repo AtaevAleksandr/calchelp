@@ -41,6 +41,3 @@ struct FibonacciButton: View {
     }
 }
 
-#Preview {
-    FibonacciButton(title: "Fibonacci Calculator", iconImage: "Fibonacci")
-}

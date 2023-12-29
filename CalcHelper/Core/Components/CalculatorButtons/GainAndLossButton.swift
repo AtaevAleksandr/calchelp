@@ -40,7 +40,3 @@ struct GainAndLossButton: View {
         }
     }
 }
-
-#Preview {
-    GainAndLossButton(title: "Gain & Loss", iconImage: "GainLoss")
-}

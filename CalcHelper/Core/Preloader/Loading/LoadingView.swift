@@ -25,7 +25,7 @@ struct LoadingView: View {
     var body: some View {
         ZStack {
             if isAlredyOnboarding && isInitialLoadingCompleted {
-                TabBarView()
+                SwiftUIView()
             } else {
                 OnboardingView()
             }
@@ -119,9 +119,6 @@ struct LoadingView: View {
     }
 }
 
-#Preview {
-    LoadingView()
-}
 
 // MARK: COMPONENTS
 extension LoadingView {

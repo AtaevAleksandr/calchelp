@@ -40,7 +40,3 @@ struct SettingsButton: View {
         }
     }
 }
-
-#Preview {
-    SettingsButton(title: "Settings", iconImage: "Settings")
-}

@@ -44,10 +44,3 @@ struct RateView: View {
         .foregroundStyle(.white)
     }
 }
-
-#Preview {
-    ZStack {
-        BackgroundView()
-        RateView()
-    }
-}

@@ -44,6 +44,3 @@ struct EditorsButton: View {
     }
 }
 
-#Preview {
-    EditorsButton(title: "Editors’ picks", iconImage: "Editors'")
-}

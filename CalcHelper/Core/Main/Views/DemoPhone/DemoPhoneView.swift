@@ -30,12 +30,6 @@ struct DemoPhoneView: View {
 
 }
 
-#Preview {
-    ZStack {
-        BackgroundView()
-        DemoPhoneView()
-    }
-}
 
 //MARK: COMPONENTS
 extension DemoPhoneView {

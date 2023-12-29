@@ -49,9 +49,6 @@ struct OnboardingView: View {
     }
 }
 
-#Preview {
-    OnboardingView()
-}
 
 //MARK: COMPONENTS
 extension OnboardingView {

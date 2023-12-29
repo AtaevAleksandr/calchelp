@@ -43,7 +43,3 @@ struct StreamsButton: View {
         }
     }
 }
-
-#Preview {
-    StreamsButton(title: "Streams", iconImage: "Streams")
-}

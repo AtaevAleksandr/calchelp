@@ -49,7 +49,3 @@ struct PrivacyPolicyButton: View {
         }
     }
 }
-
-#Preview {
-    PrivacyPolicyButton(title: "Privacy Policy", iconImage: "Privacy")
-}
