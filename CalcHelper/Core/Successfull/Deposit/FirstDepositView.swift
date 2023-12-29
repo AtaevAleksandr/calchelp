@@ -10,6 +10,8 @@ import SwiftUI
 struct FirstDepositView: View {
     var body: some View {
         ZStack {
+            BackgroundView()
+
             Ellipse()
                 .foregroundStyle(Color.theme.customMint)
                 .frame(width: 375, height: 347)
@@ -40,8 +42,5 @@ struct FirstDepositView: View {
 }
 
 #Preview {
-    ZStack {
-        BackgroundView()
-        FirstDepositView()
-    }
+    FirstDepositView()
 }

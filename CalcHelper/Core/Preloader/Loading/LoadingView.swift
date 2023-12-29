@@ -11,7 +11,13 @@ import AppTrackingTransparency
 struct LoadingView: View {
 
     @AppStorage("isAlredyOnboarding") var isAlredyOnboarding: Bool = false
+    @State private var isFirstLaunch: Bool = false
+    @AppStorage("isNotificationPermissionGranted") var isNotificationPermissionGranted: Bool = false
+    @State private var isShowViewIn2Min: Bool = false
+    @State private var isShowViewEvery3Time: Bool = false
+    @State private var isAppearViewEvery3Time: Bool = false
 
+    @AppStorage("launchCount") private var launchCount: Int = 0
     @State private var isInitialLoadingCompleted: Bool = false
     @State private var isLoading: Bool = false
     @State private var rotation: Double = 0
@@ -31,19 +37,43 @@ struct LoadingView: View {
                     spinner
                 }
             }
+
+
+        }
+        .fullScreenCover(isPresented: $isShowViewIn2Min) {
+            DemoSignalsView(showView: $isShowViewIn2Min)
+        }
+        .fullScreenCover(isPresented: $isShowViewEvery3Time) {
+            DemoSignalsView(showView: $isShowViewEvery3Time)
         }
         .onAppear() {
             if !isInitialLoadingCompleted {
                 fakeStartLoading()
+            }
+
+            launchCount += 1
+
+            if !isNotificationPermissionGranted {
+                if !self.isFirstLaunch {
+
+                    if !isNotificationPermissionGranted && launchCount % 3 != 0 {
+                        DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
+                            self.isShowViewIn2Min = true
+                        }
+                    }
+
+                    if !isNotificationPermissionGranted && launchCount % 3 == 0 {
+                        self.isShowViewEvery3Time = true
+                    }
+                }
             }
         }
     }
 
     private func fakeStartLoading() {
         isLoading = true
-        Timer.scheduledTimer(withTimeInterval: 1.5, repeats: false) { _ in
-            requestTrackingAuthorization()
-        }
+        checkNotificationPermission()
+
         Timer.scheduledTimer(withTimeInterval: 3, repeats: false) { _ in
             isLoading = false
             isInitialLoadingCompleted = true
@@ -66,6 +96,27 @@ struct LoadingView: View {
             }
         }
     }
+
+    func checkNotificationPermission() {
+        let center = UNUserNotificationCenter.current()
+
+        center.getNotificationSettings { settings in
+            switch settings.authorizationStatus {
+            case .authorized:
+                self.isNotificationPermissionGranted = true
+            case .denied:
+                break
+            case .notDetermined:
+                break
+            case .provisional:
+                break
+            case .ephemeral:
+                break
+            @unknown default:
+                break
+            }
+        }
+    }
 }
 
 #Preview {
@@ -81,7 +132,7 @@ extension LoadingView {
             .frame(width: 100, height: 100)
             .rotationEffect(Angle(degrees: rotation))
             .animation(.linear(duration: 1.0).repeatForever(autoreverses: false), value: UUID())
-            .onAppear() {
+            .onAppear {
                 self.rotation = 360.0
             }
     }

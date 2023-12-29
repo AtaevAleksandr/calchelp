@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5B13F6A92B37419B00F3C90A /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5B13F6AB2B37419B00F3C90A /* Localizable.strings */; };
 		5B203FFB2B121C5D00BD99CC /* TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B203FFA2B121C5D00BD99CC /* TimerView.swift */; };
 		5B203FFD2B12328F00BD99CC /* SignalRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B203FFC2B12328F00BD99CC /* SignalRowView.swift */; };
 		5B23B01E2B01705A007C6892 /* DemoCalculatorsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B23B01D2B01705A007C6892 /* DemoCalculatorsView.swift */; };
@@ -31,6 +32,8 @@
 		5B7A2F282B057D8700454B14 /* SettingsButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B7A2F272B057D8700454B14 /* SettingsButton.swift */; };
 		5B7FBAAA2B093B65004E049F /* FibonacciCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B7FBAA92B093B65004E049F /* FibonacciCalculator.swift */; };
 		5B7FBAAC2B095365004E049F /* ListRowViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B7FBAAB2B095365004E049F /* ListRowViewModel.swift */; };
+		5B8D2F362B24F7E40019D523 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5B8D2F352B24F7E40019D523 /* GoogleService-Info.plist */; };
+		5B8D2F522B24FE990019D523 /* EventLoggerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B8D2F512B24FE990019D523 /* EventLoggerManager.swift */; };
 		5B9FAD9A2B06C2960061BF21 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9FAD992B06C2960061BF21 /* SettingsView.swift */; };
 		5BA4D15D2B013D5D00B4A10F /* DemoPhoneView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BA4D15C2B013D5D00B4A10F /* DemoPhoneView.swift */; };
 		5BB4DF8F2B00DE3500DE827B /* CalcHelperApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BB4DF8E2B00DE3500DE827B /* CalcHelperApp.swift */; };
@@ -49,6 +52,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5B13F6AA2B37419B00F3C90A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		5B13F6AC2B3741A500F3C90A /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
 		5B203FF92B120ABB00BD99CC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		5B203FFA2B121C5D00BD99CC /* TimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerView.swift; sourceTree = "<group>"; };
 		5B203FFC2B12328F00BD99CC /* SignalRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignalRowView.swift; sourceTree = "<group>"; };
@@ -74,6 +79,9 @@
 		5B7A2F272B057D8700454B14 /* SettingsButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsButton.swift; sourceTree = "<group>"; };
 		5B7FBAA92B093B65004E049F /* FibonacciCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FibonacciCalculator.swift; sourceTree = "<group>"; };
 		5B7FBAAB2B095365004E049F /* ListRowViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListRowViewModel.swift; sourceTree = "<group>"; };
+		5B8D2F352B24F7E40019D523 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		5B8D2F452B24F86C0019D523 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
+		5B8D2F512B24FE990019D523 /* EventLoggerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventLoggerManager.swift; sourceTree = "<group>"; };
 		5B9FAD992B06C2960061BF21 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		5BA4D15C2B013D5D00B4A10F /* DemoPhoneView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoPhoneView.swift; sourceTree = "<group>"; };
 		5BB4DF8B2B00DE3500DE827B /* CalcHelper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CalcHelper.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -333,6 +341,22 @@
 			path = TabBar;
 			sourceTree = "<group>";
 		};
+		5B8D2F422B24F85A0019D523 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5B8D2F452B24F86C0019D523 /* AdSupport.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5B8D2F472B24F8850019D523 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				5B8D2F512B24FE990019D523 /* EventLoggerManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
 		5B9FAD962B06C2360061BF21 /* Fibonacci */ = {
 			isa = PBXGroup;
 			children = (
@@ -364,6 +388,7 @@
 			children = (
 				5BB4DF8D2B00DE3500DE827B /* CalcHelper */,
 				5BB4DF8C2B00DE3500DE827B /* Products */,
+				5B8D2F422B24F85A0019D523 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -379,10 +404,13 @@
 			isa = PBXGroup;
 			children = (
 				5B203FF92B120ABB00BD99CC /* Info.plist */,
+				5B8D2F352B24F7E40019D523 /* GoogleService-Info.plist */,
 				5BB4DF9C2B00DE7200DE827B /* App */,
 				5BB4DF942B00DE3700DE827B /* Preview Content */,
 				5BB4DFA52B00E82700DE827B /* Extensions */,
+				5B8D2F472B24F8850019D523 /* Managers */,
 				5BB4DFAA2B00F22100DE827B /* Core */,
+				5BC97FA22B34CE7300531A2E /* Localize */,
 			);
 			path = CalcHelper;
 			sourceTree = "<group>";
@@ -483,6 +511,14 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		5BC97FA22B34CE7300531A2E /* Localize */ = {
+			isa = PBXGroup;
+			children = (
+				5B13F6AB2B37419B00F3C90A /* Localizable.strings */,
+			);
+			path = Localize;
+			sourceTree = "<group>";
+		};
 		5BD0B8EA2B02A9F400F362B4 /* HomeTab */ = {
 			isa = PBXGroup;
 			children = (
@@ -518,6 +554,8 @@
 			dependencies = (
 			);
 			name = CalcHelper;
+			packageProductDependencies = (
+			);
 			productName = CalcHelper;
 			productReference = 5BB4DF8B2B00DE3500DE827B /* CalcHelper.app */;
 			productType = "com.apple.product-type.application";
@@ -544,8 +582,12 @@
 			knownRegions = (
 				en,
 				Base,
+				ru,
 			);
 			mainGroup = 5BB4DF822B00DE3500DE827B;
+			packageReferences = (
+				5B8D2F372B24F8430019D523 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			productRefGroup = 5BB4DF8C2B00DE3500DE827B /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -560,7 +602,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5B13F6A92B37419B00F3C90A /* Localizable.strings in Resources */,
 				5BB4DF9F2B00DF6400DE827B /* LaunchScreen.storyboard in Resources */,
+				5B8D2F362B24F7E40019D523 /* GoogleService-Info.plist in Resources */,
 				5BB4DF962B00DE3700DE827B /* Preview Assets.xcassets in Resources */,
 				5BB4DF932B00DE3700DE827B /* Assets.xcassets in Resources */,
 			);
@@ -599,6 +643,7 @@
 				5B7A2F282B057D8700454B14 /* SettingsButton.swift in Sources */,
 				5B516A3B2B0A2EA100395CA4 /* RowModel.swift in Sources */,
 				5B23B0202B017083007C6892 /* RateView.swift in Sources */,
+				5B8D2F522B24FE990019D523 /* EventLoggerManager.swift in Sources */,
 				5B203FFD2B12328F00BD99CC /* SignalRowView.swift in Sources */,
 				5B777CDB2B1F2DB50085A6B0 /* StartView.swift in Sources */,
 				5BF337662B04074300BE382E /* BackgroundTabView.swift in Sources */,
@@ -614,12 +659,25 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXVariantGroup section */
+		5B13F6AB2B37419B00F3C90A /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5B13F6AA2B37419B00F3C90A /* en */,
+				5B13F6AC2B3741A500F3C90A /* ru */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
 /* Begin XCBuildConfiguration section */
 		5BB4DF972B00DE3700DE827B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -683,6 +741,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -741,6 +800,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_ASSET_PATHS = "\"CalcHelper/Preview Content\"";
 				DEVELOPMENT_TEAM = 695W8CRMKH;
 				ENABLE_PREVIEWS = YES;
@@ -830,6 +890,17 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		5B8D2F372B24F8430019D523 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.19.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
 	};
 	rootObject = 5BB4DF832B00DE3500DE827B /* Project object */;
 }

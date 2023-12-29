@@ -24,7 +24,7 @@ struct SignalRowView: View {
 
                 Spacer()
 
-                Text(signal.status.displayText)
+                Text(LocalizedStringKey(signal.status.displayText))
                     .font(.system(size: 14, weight: .medium))
                     .padding(.horizontal)
                     .frame(height: 25)

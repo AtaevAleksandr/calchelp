@@ -23,7 +23,7 @@ struct EditorsButton: View {
                     .frame(width: 24, height: 24)
                     .foregroundStyle(Color.theme.customMint)
 
-                Text(title)
+                Text(LocalizedStringKey(title))
                     .font(.system(size: 16, weight: .medium))
             }
         }

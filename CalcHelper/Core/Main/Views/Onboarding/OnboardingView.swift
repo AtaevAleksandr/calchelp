@@ -12,6 +12,7 @@ import StoreKit
 struct OnboardingView: View {
 
     @AppStorage("isAlredyOnboarding") var isAlredyOnboarding: Bool = false
+    @AppStorage("isNotificationPermissionGranted") var isNotificationPermissionGranted: Bool = false
 
     @State private var onboardingState: Int = 0
     @State private var notificationAuthorization: Bool = false
@@ -59,7 +60,7 @@ extension OnboardingView {
             handleContinuedButtonPressed()
         } label: {
             Text(onboardingState == 5 ?
-                 "Get Started" : onboardingState == 2 || onboardingState == 4 ?
+                 "Get Started": onboardingState == 2 || onboardingState == 4 ?
                  "Show" : "Continue")
             .font(.headline)
             .foregroundStyle(.white)
@@ -93,12 +94,19 @@ extension OnboardingView {
     private func requestAuthorization() {
         let options: UNAuthorizationOptions = [.alert, .sound]
         UNUserNotificationCenter.current().requestAuthorization(options: options) { (success, error) in
-            if let error = error {
-                print ("ERROR: \(error)")
+            if success {
+                self.isNotificationPermissionGranted = true
+                withAnimation(.spring()) {
+                    self.onboardingState += 1
+                }
             } else {
                 withAnimation(.spring()) {
                     self.onboardingState += 1
                 }
+            }
+
+            if let error = error {
+                print ("ERROR: \(error)")
             }
         }
     }
@@ -111,7 +119,6 @@ extension OnboardingView {
             }
         }
     }
-
 
     private func goToTabView() {
         isAlredyOnboarding = true

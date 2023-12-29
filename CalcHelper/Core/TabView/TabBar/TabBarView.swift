@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct TabBarView: View {
-    
+
     var body: some View {
         TabView {
             HomeView()
@@ -16,7 +16,7 @@ struct TabBarView: View {
                     Label("Home",
                           image: "Home")
                 }
-
+            
             SignalsView()
                 .tabItem {
                     Label("Signals",
@@ -32,7 +32,7 @@ struct TabBarView: View {
     }
 }
 
-#Preview {
-    TabBarView()
-        .preferredColorScheme(.dark)
-}
+//#Preview {
+//    TabBarView()
+//        .preferredColorScheme(.dark)
+//}

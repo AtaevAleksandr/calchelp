@@ -11,6 +11,8 @@ struct SignalsView: View {
 
     @EnvironmentObject private var viewModel: SignalViewModel
 
+    @AppStorage("isNotificationPermissionGranted") var isNotificationPermissionGranted: Bool = false
+
     @State private var showLowSignals: Bool = true
     @State private var showNormalSignals: Bool = false
     @State private var showHighSignals: Bool = false
@@ -18,6 +20,9 @@ struct SignalsView: View {
     @State private var lowButtonIsActive: Bool = true
     @State private var normalButtonIsActive: Bool = false
     @State private var highButtonIsActive: Bool = false
+
+    @State private var viewAppearCount: Int = 0
+    @State private var isAppearViewEvery3Time: Bool = false
 
     var body: some View {
         NavigationView {
@@ -53,6 +58,17 @@ struct SignalsView: View {
             }
             .navigationTitle("Signals")
             .navigationBarTitleDisplayMode(.inline)
+            .onAppear {
+                viewAppearCount += 1
+                checkNotificationPermission()
+
+                if !isNotificationPermissionGranted && viewAppearCount == 3 {
+                    self.isAppearViewEvery3Time = true
+                }
+            }
+            .fullScreenCover(isPresented: $isAppearViewEvery3Time) {
+                DemoSignalsView(showView: $isAppearViewEvery3Time)
+            }
         }
     }
 
@@ -85,6 +101,27 @@ struct SignalsView: View {
         lowButtonIsActive = false
         normalButtonIsActive = false
         highButtonIsActive = true
+    }
+
+    func checkNotificationPermission() {
+        let center = UNUserNotificationCenter.current()
+
+        center.getNotificationSettings { settings in
+            switch settings.authorizationStatus {
+            case .authorized:
+                self.isNotificationPermissionGranted = true
+            case .denied:
+                break
+            case .notDetermined:
+                break
+            case .provisional:
+                break
+            case .ephemeral:
+                break
+            @unknown default:
+                break
+            }
+        }
     }
 }
 

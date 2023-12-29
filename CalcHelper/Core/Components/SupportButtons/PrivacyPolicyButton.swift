@@ -23,7 +23,7 @@ struct PrivacyPolicyButton: View {
                     .frame(width: 44, height: 44)
                     .foregroundStyle(Color.theme.customMint)
 
-                Text(title)
+                Text(LocalizedStringKey(title))
                     .font(.system(size: 18, weight: .medium))
 
                 Spacer()

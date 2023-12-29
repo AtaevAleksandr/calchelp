@@ -142,9 +142,7 @@ struct FibonacciCalculator: View {
 //MARK: COMPONENTS
 extension FibonacciCalculator {
     private var descriptionText: some View {
-        Text("""
-             The presented Fibonacci calculator will help you to generate four basic Fibonacci retracement values — 23.6%, 38.2%, 50% and 61.8%. All you need to do is to fill the current trend's highest and lowest values into the form below and press the "Calculate" button.
-             """)
+        Text("The presented Fibonacci calculator will help you to generate four basic Fibonacci retracement values — 23.6%, 38.2%, 50% and 61.8%. All you need to do is to fill the current trend's highest and lowest values into the form below and press the 'Calculate' button.")
         .padding()
         .font(.system(size: 16, weight: .regular))
         .foregroundStyle(.white)
@@ -252,7 +250,7 @@ extension FibonacciCalculator {
         VStack(spacing: 0) {
             ForEach(viewModel.rows, id: \.id) { component in
                 HStack {
-                    Text(component.value)
+                    Text(LocalizedStringKey(component.value))
                     Spacer()
                     Spacer()
 

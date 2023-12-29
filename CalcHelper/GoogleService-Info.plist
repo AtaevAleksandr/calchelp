@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>API_KEY</key>
+	<string>AIzaSyAnrPXHzI_ejjH6eIqL9tdTt8P8NjmherI</string>
+	<key>GCM_SENDER_ID</key>
+	<string>555059122863</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>AtaevAleksandr.CalcHelper</string>
+	<key>PROJECT_ID</key>
+	<string>calchelp-3949b</string>
+	<key>STORAGE_BUCKET</key>
+	<string>calchelp-3949b.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:555059122863:ios:6d897d36034e40da777a5a</string>
+</dict>
+</plist>

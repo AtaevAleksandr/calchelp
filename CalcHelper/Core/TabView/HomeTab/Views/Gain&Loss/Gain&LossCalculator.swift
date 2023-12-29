@@ -161,11 +161,10 @@ extension GainLossCalculator {
     }
 
     private var descriptionText: some View {
-        Text("""
-             This online gain and loss percentage calculator quickly tells you what percentage of the account balance you have won or lost. It also estimates a percentage of current balance required to get to the breakeven point again. Alternatively, you can enter the percentages and see the size of your gain or loss in currency.
-
-             The calculator will do its work as you fill out the fields. You can switch between loss and gain by clicking the button. You can even find out your starting balance by filling your current balance and the recent balance change.
-             """)
+        VStack {
+            Text("This online gain and loss percentage calculator quickly tells you what percentage of the account balance you have won or lost. It also estimates a percentage of current balance required to get to the breakeven point again. Alternatively, you can enter the percentages and see the size of your gain or loss in currency.")
+            Text("The calculator will do its work as you fill out the fields. You can switch between loss and gain by clicking the button. You can even find out your starting balance by filling your current balance and the recent balance change.")
+        }
         .padding()
         .font(.system(size: 16, weight: .regular))
         .foregroundStyle(.white)

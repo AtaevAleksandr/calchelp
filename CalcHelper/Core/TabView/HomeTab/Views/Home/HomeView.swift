@@ -33,6 +33,7 @@ struct HomeView: View {
         .preferredColorScheme(.dark)
 }
 
+//MARK: COMPONENTS
 struct TradingView: View {
     var body: some View {
         Text("Trading view")
