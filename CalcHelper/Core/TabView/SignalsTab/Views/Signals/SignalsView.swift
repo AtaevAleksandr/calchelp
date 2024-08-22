@@ -8,32 +8,28 @@
 import SwiftUI
 
 struct SignalsView: View {
-
+    
     @EnvironmentObject private var viewModel: SignalViewModel
-
+    
     @AppStorage("isNotificationPermissionGranted") var isNotificationPermissionGranted: Bool = false
-
+    
     @State private var showLowSignals: Bool = true
     @State private var showNormalSignals: Bool = false
     @State private var showHighSignals: Bool = false
-
+    
     @State private var lowButtonIsActive: Bool = true
     @State private var normalButtonIsActive: Bool = false
     @State private var highButtonIsActive: Bool = false
-
-    @State private var viewAppearCount: Int = 0
-    @State private var isAppearViewEvery3Time: Bool = false
-
     var body: some View {
         NavigationView {
             ZStack {
                 BackgroundTabView()
-
+                
                 VStack {
                     headerView
-
+                    
                     timerView
-
+                    
                     if showLowSignals {
                         allLowSignals
                             .onAppear {
@@ -58,70 +54,38 @@ struct SignalsView: View {
             }
             .navigationTitle("Signals")
             .navigationBarTitleDisplayMode(.inline)
-            .onAppear {
-                viewAppearCount += 1
-                checkNotificationPermission()
-
-                if !isNotificationPermissionGranted && viewAppearCount == 3 {
-                    self.isAppearViewEvery3Time = true
-                }
-            }
-            .fullScreenCover(isPresented: $isAppearViewEvery3Time) {
-                DemoSignalsView(showView: $isAppearViewEvery3Time)
-            }
         }
     }
-
+    
     //MARK: FUNCTIONS
     private func lowButtonPressed() {
         showLowSignals = true
         showNormalSignals = false
         showHighSignals  = false
-
+        
         lowButtonIsActive = true
         normalButtonIsActive = false
         highButtonIsActive = false
     }
-
+    
     private func normalButtonPressed() {
         showLowSignals = false
         showNormalSignals = true
         showHighSignals  = false
-
+        
         lowButtonIsActive = false
         normalButtonIsActive = true
         highButtonIsActive = false
     }
-
+    
     private func highButtonPressed() {
         showLowSignals = false
         showNormalSignals = false
         showHighSignals  = true
-
+        
         lowButtonIsActive = false
         normalButtonIsActive = false
         highButtonIsActive = true
-    }
-
-    func checkNotificationPermission() {
-        let center = UNUserNotificationCenter.current()
-
-        center.getNotificationSettings { settings in
-            switch settings.authorizationStatus {
-            case .authorized:
-                self.isNotificationPermissionGranted = true
-            case .denied:
-                break
-            case .notDetermined:
-                break
-            case .provisional:
-                break
-            case .ephemeral:
-                break
-            @unknown default:
-                break
-            }
-        }
     }
 }
 
@@ -132,7 +96,7 @@ extension SignalsView {
         VStack(alignment: .leading) {
             Text("Choose a risk")
                 .font(.system(size: 16, weight: .medium))
-
+            
             HStack {
                 lowRiskButton
                 normalRiskButton
@@ -141,19 +105,19 @@ extension SignalsView {
         }
         .padding(.bottom)
     }
-
+    
     var timerView: some View {
         VStack(alignment: .center, spacing: 8) {
             Text("Update signal")
                 .font(.system(size: 16, weight: .semibold))
                 .foregroundStyle(.white)
-
+            
             TimerView()
-
+            
         }
         .padding(.top)
     }
-
+    
     var allLowSignals: some View {
         ScrollView(showsIndicators: false) {
             if let signalData: [SignalModel] = viewModel.allLowSignals[viewModel.formattedDate()] {
@@ -163,7 +127,7 @@ extension SignalsView {
             }
         }
     }
-
+    
     var allNormalSignals: some View {
         ScrollView(showsIndicators: false) {
             if let signalData: [SignalModel] = viewModel.allNormalSignals[viewModel.formattedDate()] {
@@ -173,7 +137,7 @@ extension SignalsView {
             }
         }
     }
-
+    
     var allHighSignals: some View {
         ScrollView(showsIndicators: false) {
             if let signalData: [SignalModel] = viewModel.allHighSignals[viewModel.formattedDate()] {
@@ -200,7 +164,7 @@ extension SignalsView {
                 .cornerRadius(8)
         }
     }
-
+    
     var normalRiskButton: some View {
         Button {
             normalButtonPressed()
@@ -214,7 +178,7 @@ extension SignalsView {
                 .cornerRadius(8)
         }
     }
-
+    
     var highRiskButton: some View {
         Button {
             highButtonPressed()
